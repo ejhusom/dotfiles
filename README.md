@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-git clone
+git clone https://github.com/ejhusom/dotvim
 ```
 Create symlink:
 ```

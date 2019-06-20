@@ -95,8 +95,11 @@ set statusline+=\ %LL\  " total number of lines
 """"""""""""""""""""""""""""""""""
 augroup snippets
     autocmd BufNewFile *.c 0r ~/.vim/snippets/skeleton.c
+    autocmd BufNewFile README.md 0r ~/.vim/snippets/README.md
+    autocmd BufNewFile report.tex 0r ~/.vim/snippets/report.tex
 augroup END
 
+nnoremap ,makelatex :0r ~/.vim/snippets/makelatex
 
 """"""""""""""""""""""""""""""""""
 " PANDOC
