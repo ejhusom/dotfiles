@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/run/user/1000/keybase/kbfs/public/erikjohannes/posts/201605-svalbard'
-let g:netrw_dirhist_2='/run/user/1000/keybase/kbfs/public/erikjohannes/posts/20190217-grefsenkollen'
-let g:netrw_dirhist_3='/run/user/1000/keybase/kbfs/public/erikjohannes/posts/20190310-maridalen'
-let g:netrw_dirhist_4='/run/user/1000/keybase/kbfs/public/erikjohannes/posts'
-let g:netrw_dirhist_5='/run/user/1000/keybase/kbfs/public/erikjohannes/posts/20190127-storlidalen'
