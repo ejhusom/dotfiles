@@ -100,6 +100,7 @@ augroup snippets
 augroup END
 
 nnoremap ,makelatex :0r ~/.vim/snippets/makelatex
+nnoremap ,makemarkdown :0r ~/.vim/snippets/makemarkdown
 
 """"""""""""""""""""""""""""""""""
 " PANDOC
