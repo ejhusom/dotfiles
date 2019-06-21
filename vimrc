@@ -4,6 +4,7 @@
 " General
 """"""""""""""""""""""""""""""""""
 syntax on                   " syntax highlighting
+filetype plugin on
 set scrolloff=7             " number of lines above/below cursor when scrolling
 set number                  " line numbers
 set wildmenu                " autocomplete menu
@@ -29,6 +30,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 set incsearch               " automatically jumps to first match
 set hlsearch                " highlight search terms
 set smartcase               " ignores case if search term has small case, but does not ignore case if term has large case
+set path+=**                " search in subfolders when using :find
 
 
 
@@ -95,12 +97,16 @@ set statusline+=\ %LL\  " total number of lines
 """"""""""""""""""""""""""""""""""
 augroup snippets
     autocmd BufNewFile *.c 0r ~/.vim/snippets/skeleton.c
+    autocmd BufNewFile *.h 0r ~/.vim/snippets/skeleton.h
+    autocmd BufNewFile *.cpp 0r ~/.vim/snippets/skeleton.cpp
     autocmd BufNewFile README.md 0r ~/.vim/snippets/README.md
     autocmd BufNewFile report.tex 0r ~/.vim/snippets/report.tex
 augroup END
 
 nnoremap ,makelatex :0r ~/.vim/snippets/makelatex
 nnoremap ,makemarkdown :0r ~/.vim/snippets/makemarkdown
+nnoremap ,makec :0r ~/.vim/snippets/makec
+nnoremap ,makecpp :0r ~/.vim/snippets/makecpp
 
 """"""""""""""""""""""""""""""""""
 " PANDOC
@@ -112,3 +118,12 @@ nmap <Leader>pc :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf % && xdg-open /tmp/
 nmap <Leader>hc :RunSilent pandoc -o /tmp/vim-pandoc-out.html -s --mathml % && xdg-open /tmp/vim-pandoc-out.html<CR>
 
 
+""""""""""""""""""""""""""""""""""
+" File browsing
+""""""""""""""""""""""""""""""""""
+let g:netrw_banner=0        " disable annoying banner
+let g:netrw_browse_split=4  " open in prior window
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+"let g:netrw_list_hide=netrw_gitignore#Hide()
+"let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
