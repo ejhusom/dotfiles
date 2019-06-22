@@ -15,3 +15,4 @@ ln -s ~/.vim/vimrc ~/.vimrc
 ```
 
 Alternative to creating symlink: Just move/copy the `.vimrc` file to your home folder.
+
