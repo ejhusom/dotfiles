@@ -119,7 +119,8 @@ fi
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
+##################################
+###### PERSONAL BASH CONFIG ######
 
 # git aliases
-alias gac='git add -A && git commit -m'
-alias gp='git push'
+alias g='git status'
