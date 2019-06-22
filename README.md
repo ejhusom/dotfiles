@@ -1,18 +1,16 @@
-# Vim configuration
+# Configuration files
 
-This repository contains my complete Vim configuration. Feel free to use it (or
-parts of it), or just get some ideas of what is possible with Vim.
+This repository contains configuration files for various programs. Feel free to use it (or parts of it), or just get some ideas.
 
 ## Installation
 
-1. Clone repository in your home folder, into a directory called `.vim`:
+1. Clone repository:
 ```
-git clone https://github.com/ejhusom/dotvim .vim
+git clone https://github.com/ejhusom/dotfiles
 ```
-2. Create symlink:
+2. Create symlinks to the folder. For example, in the case of Vim:
 ```
-ln -s ~/.vim/vimrc ~/.vimrc
+ln -s /path/to/dotfiles/vimrc ~/.vimrc
 ```
 
-Alternative to creating symlink: Just move/copy the `.vimrc` file to your home folder.
 
