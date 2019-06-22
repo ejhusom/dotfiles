@@ -4,13 +4,15 @@ This repository contains configuration files for various programs. Feel free to 
 
 ## Installation
 
-1. Clone repository:
+1. Clone repository in home folder:
 ```
-git clone https://github.com/ejhusom/dotfiles
+$ git clone https://github.com/ejhusom/dotfiles ~/dotfiles
 ```
-2. Create symlinks to the folder. For example, in the case of Vim:
+2. Create necessary symlinks:
 ```
-ln -s /path/to/dotfiles/vimrc ~/.vimrc
+$ ln -s ~/dotfiles/vimrc ~/.vimrc
+$ ln -s ~/dotfiles/bashrc ~/.bashrc
+$ ln -s ~/dotfiles/ ~/.vim
 ```
 
 
