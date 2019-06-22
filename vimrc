@@ -109,6 +109,7 @@ augroup snippets
     autocmd BufNewFile *.c 0r ~/.vim/snippets/skeleton.c
     autocmd BufNewFile *.h 0r ~/.vim/snippets/skeleton.h
     autocmd BufNewFile *.cpp 0r ~/.vim/snippets/skeleton.cpp
+    autocmd BufNewFile *.py 0r ~/.vim/snippets/skeleton.py
     autocmd BufNewFile README.md 0r ~/.vim/snippets/README.md
     autocmd BufNewFile report.tex 0r ~/.vim/snippets/report.tex
 augroup END
@@ -117,6 +118,7 @@ nnoremap ,makelatex :0r ~/.vim/snippets/makelatex<CR>
 nnoremap ,makemarkdown :0r ~/.vim/snippets/makemarkdown<CR>
 nnoremap ,makec :0r ~/.vim/snippets/makec<CR>
 nnoremap ,makecpp :0r ~/.vim/snippets/makecpp<CR>
+nnoremap ,bash :0r ~/.vim/snippets/bashheader<CR>
 
 """"""""""""""""""""""""""""""""""
 " PANDOC

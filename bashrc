@@ -119,6 +119,7 @@ fi
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
+
 # git aliases
 alias gac='git add -A && git commit -m'
 alias gp='git push'
