@@ -1,5 +1,10 @@
 #!/bin/bash
+# Git shortcut script by Erik Johannes Husom on 22-06-2019
+# Usage:
+# ```
+# $ gacp description of commit without quotes
+# ```
 
 git add -A
-git commit -m "$1"
+git commit -m "$*"
 git push
