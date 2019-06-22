@@ -122,5 +122,11 @@ export PATH="$HOME/gems/bin:$PATH"
 ##################################
 ###### PERSONAL BASH CONFIG ######
 
+# set PATH so it includes bin from dotfiles
+if [ -d "$HOME/dotfiles/bin" ] ; then
+    PATH="$HOME/dotfiles/bin:$PATH"
+    export PATH
+fi
+
 # git aliases
 alias g='git status'
