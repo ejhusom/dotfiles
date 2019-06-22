@@ -118,7 +118,7 @@ nnoremap ,makelatex :0r ~/.vim/snippets/makelatex<CR>
 nnoremap ,makemarkdown :0r ~/.vim/snippets/makemarkdown<CR>
 nnoremap ,makec :0r ~/.vim/snippets/makec<CR>
 nnoremap ,makecpp :0r ~/.vim/snippets/makecpp<CR>
-nnoremap ,bash :0r ~/.vim/snippets/bashheader<CR>
+nnoremap ,bash :0r ~/.vim/snippets/bashheader<CR><S-g>
 
 """"""""""""""""""""""""""""""""""
 " PANDOC
@@ -126,8 +126,8 @@ nnoremap ,bash :0r ~/.vim/snippets/bashheader<CR>
 command! -nargs=* RunSilent
       \ | execute ':silent !'.'<args>'
       \ | execute ':redraw!'
-nmap <Leader>pc :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf % && xdg-open /tmp/vim-pandoc-out.pdf<CR>
-nmap <Leader>hc :RunSilent pandoc -o /tmp/vim-pandoc-out.html -s --mathml % && xdg-open /tmp/vim-pandoc-out.html<CR>
+nmap ,pc :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf % && xdg-open /tmp/vim-pandoc-out.pdf<CR>
+nmap ,hc :RunSilent pandoc -o /tmp/vim-pandoc-out.html -s --mathml % && xdg-open /tmp/vim-pandoc-out.html<CR>
 
 
 """"""""""""""""""""""""""""""""""
