@@ -106,11 +106,11 @@ set statusline+=\ %LL\                      " total number of lines
 " SNIPPETS AND SKELETONS
 """"""""""""""""""""""""""""""""""
 augroup snippets
-    autocmd BufNewFile *.c 0r ~/dotfiles/vim/snippets/skeleton.c
-    autocmd BufNewFile *.h 0r ~/dotfiles/vim/snippets/skeleton.h
-    autocmd BufNewFile *.cpp 0r ~/dotfiles/vim/snippets/skeleton.cpp
-    autocmd BufNewFile README.md 0r ~/dotfiles/vim/snippets/README.md
-    autocmd BufNewFile report.tex 0r ~/dotfiles/vim/snippets/report.tex
+    autocmd BufNewFile *.c 0r ~/.vim/snippets/skeleton.c
+    autocmd BufNewFile *.h 0r ~/.vim/snippets/skeleton.h
+    autocmd BufNewFile *.cpp 0r ~/.vim/snippets/skeleton.cpp
+    autocmd BufNewFile README.md 0r ~/.vim/snippets/README.md
+    autocmd BufNewFile report.tex 0r ~/.vim/snippets/report.tex
 augroup END
 
 nnoremap ,makelatex :0r ~/.vim/snippets/makelatex<CR>
