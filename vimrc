@@ -13,14 +13,15 @@
 " General
 """"""""""""""""""""""""""""""""""
 syntax on                   " syntax highlighting
-filetype plugin on
+filetype indent plugin on   " determine file type and use auto-indenting
 set scrolloff=7             " number of lines above/below cursor when scrolling
 set number                  " line numbers
 set wildmenu                " autocomplete menu
 set showmatch               " highlight matching parenthesis
 set clipboard=unnamedplus   " something with copy/paste?
+set linebreak               " do not break lines in middle of a word
 set textwidth=79            " max line width
-
+"set mouse=a                 " enable mouse in all modes
 
 """"""""""""""""""""""""""""""""""
 " Tab indentation
