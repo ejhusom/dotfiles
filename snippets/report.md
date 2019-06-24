@@ -15,10 +15,6 @@ bibliography: references.bib
 
 # Introduction
 
-![Function of temperature.](./figs/taske_Chi_224.pdf){#fig:fig1}
-
-
-Test of citation [@jensen]. Another citation [@PhysRev.65.117].
 
 # Theory
 

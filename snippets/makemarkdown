@@ -20,7 +20,7 @@ PDF			= $(DOC_NAME).pdf
 #=================================================================
 # TODO: Add support for making of figures as prerequisites
 
-markdown: $(PDF)
+pdf: $(PDF)
 $(PDF): $(DOC_NAME).md
 	pandoc $(DOC_NAME).md -o $(PDF) \
 		--filter=pandoc-fignos \
