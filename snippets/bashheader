@@ -1,1 +1,33 @@
 #!/bin/bash
+# Script by Erik Johannes Husom on dd-MM-2019.
+# ==========================================================
+# Run `script -h` for usage and description`.
+
+display_help() {
+    
+    echo "script title"
+    echo
+    echo "Usage: script [options]"
+    echo "   or: script [arguments]"
+    echo
+    echo "Arguments:"
+    echo "  -h, --help      Print Help (this message)"
+    echo
+    echo "Description:"
+    echo "  Description..."
+    echo
+
+    exit 0
+
+}
+
+script_function () {
+
+}
+
+if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+    display_help
+else
+    script_function
+fi
+
