@@ -1,13 +1,16 @@
-" Erik Johannes Husom - Vim configuration
-""""""""""""""""""""""""""""""""""
-" GENERAL TIPS
+" ===================================================================
+" File:     Vim configuration
+" Author:   Erik Johannes Husom
+" Created:  2018-10-13
+" -------------------------------------------------------------------
+" Description: General configuration for Vim on UNIX.
+" Tips:
 " - Run `sudo apt-get install vim-gtk` on Ubuntu to be able to copy
 "   to system clipboard with `"+y`.
-""""""""""""""""""""""""""""""""""
-" USEFUL RESOURCES
+" Resources:
 " - Great articles: https://vimways.org/
 " - Cheat sheet: https://vim.rtorr.com/
-
+" ===================================================================
 
 """"""""""""""""""""""""""""""""""
 " General
@@ -111,6 +114,7 @@ augroup snippets
     autocmd BufNewFile *.h 0r ~/.vim/snippets/skeleton.h
     autocmd BufNewFile *.cpp 0r ~/.vim/snippets/skeleton.cpp
     autocmd BufNewFile *.py 0r ~/.vim/snippets/skeleton.py
+    autocmd BufNewFile *.vim 0r ~/.vim/snippets/skeleton.vim
     autocmd BufNewFile README.md 0r ~/.vim/snippets/README.md
     autocmd BufNewFile report.tex 0r ~/.vim/snippets/report.tex
     autocmd BufNewFile report.md 0r ~/.vim/snippets/report.md
@@ -121,7 +125,17 @@ nnoremap ,makelatex :0r ~/.vim/snippets/makelatex<CR>
 nnoremap ,makemarkdown :0r ~/.vim/snippets/makemarkdown<CR>
 nnoremap ,makec :0r ~/.vim/snippets/makec<CR>
 nnoremap ,makecpp :0r ~/.vim/snippets/makecpp<CR>
-nnoremap ,bash :0r ~/.vim/snippets/bashheader<CR><S-g>
+nnoremap ,bash :0r ~/.vim/snippets/bashskeleton<CR><S-g>
+
+" This file is not a part of the dotfiles-repo:
+:source ~/dotfiles/snippets/abbreviations.vim 
+
+" Function for removing trailing whitespace '\s' in abbreviations:
+func Eatchar(pat)
+    let c = nr2char(getchar(0))
+    return (c =~ a:pat) ? '' : c
+endfunc
+
 
 """"""""""""""""""""""""""""""""""
 " PANDOC

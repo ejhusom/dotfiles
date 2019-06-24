@@ -1,7 +1,11 @@
 #!/bin/bash
-# Script by Erik Johannes Husom on dd-MM-2019.
-# ==========================================================
-# Run `script -h` for usage and description`.
+# ===================================================================
+# File:     bashskeleton
+# Author:   Erik Johannes Husom
+# Created:
+# -------------------------------------------------------------------
+# Description: Skeleton for bash scripts.
+# ===================================================================
 
 display_help() {
     

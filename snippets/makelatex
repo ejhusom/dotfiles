@@ -1,5 +1,8 @@
-# Makefile for Latex by Erik Johannes Husom on 2019-06-19
-#=================================================================
+# ===================================================================
+# File:     Makefile for Latex
+# Author:   Erik Johannes Husom
+# Created:  2019-06-19
+# -------------------------------------------------------------------
 # PREREQUISITES:
 # - latex
 # USAGE:
