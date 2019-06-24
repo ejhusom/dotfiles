@@ -1,0 +1,57 @@
+#!/bin/bash
+# Project setup script by Erik Johannes Husom on 22-06-2019.
+# ==========================================================
+# Run `projectsetup -h` for usage and description`.
+
+display_help() {
+    
+    echo "Project Setup script"
+    echo
+    echo "Usage: projectsetup [project-title]"
+    echo "   or: projectsetup [arguments]"
+    echo
+    echo "Arguments:"
+    echo "  -h, --help      Print Help (this message)"
+    echo
+    echo "Description:"
+    echo "  Sets up a project folder, with the following structure:"
+    echo "      project-title/"
+    echo "      | docs/"
+    echo "      | | figs/"
+    echo "      | | Makefile"
+    echo "      | | report.md"
+    echo "      | | references.bib"
+    echo "      | include/"
+    echo "      | src/"
+    echo "      | test/"
+    echo "      | README.md"
+    echo
+
+    exit 0
+
+}
+
+
+setup_project () {
+
+    mkdir $1
+    cd $1
+    mkdir docs include src test
+    vim -c "wq" README.md
+    cd docs/
+    mkdir figs/
+    vim -c "wq" Makefile
+    vim -c "wq" report.md
+    vim -c "wq" references.bib
+
+}
+
+
+if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+    display_help
+elif [ $# -gt 0 ]; then
+    setup_project $1
+else
+    echo "Give project title as command line argument."
+fi
+
