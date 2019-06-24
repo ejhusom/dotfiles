@@ -1,7 +1,7 @@
-# Makefile for Latex by Erik Johannes Husom on 2019-06-19
+# Makefile for Markdown by Erik Johannes Husom on 2019-06-19
 #=================================================================
 # PREREQUISITES:
-# - latex?
+# - latex
 # - (sudo apt-get install) pandoc
 # - (sudo apt-get install) pandoc-citeproc
 # - (pip3 install) pandoc-fignos
