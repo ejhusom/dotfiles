@@ -113,6 +113,8 @@ augroup snippets
     autocmd BufNewFile *.py 0r ~/.vim/snippets/skeleton.py
     autocmd BufNewFile README.md 0r ~/.vim/snippets/README.md
     autocmd BufNewFile report.tex 0r ~/.vim/snippets/report.tex
+    autocmd BufNewFile report.md 0r ~/.vim/snippets/report.md
+    autocmd BufNewFile references.bib 0r ~/.vim/snippets/references.bib
 augroup END
 
 nnoremap ,makelatex :0r ~/.vim/snippets/makelatex<CR>
