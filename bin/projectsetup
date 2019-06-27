@@ -43,6 +43,9 @@ setup_project () {
     vim -c "wq" Makefile
     vim -c "wq" report.md
     vim -c "wq" references.bib
+    cd ..
+    git init
+    git add -A && git commit -m "initial commit"
 
 }
 
