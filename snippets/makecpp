@@ -7,12 +7,12 @@
 # ===================================================================
 EXEC 			= a.out
 CPP 			= c++
-CPPflags 	= -Wall -O3 -g
+CPPflags 	    = -Wall -O3 -g
 LIB 			=
 
-SRC_DIR		= ./src
-INC_DIR		= -I./include
-BUILD_DIR	= ./build
+SRC_DIR		    = ./src
+INC_DIR		    = -I./include
+BUILD_DIR	    = ./build
 
 SRC 			:= $(wildcard $(SRC_DIR)/*.cpp)
 INC  			:= $(wildcard $(SRC_DIR)/*.h)
@@ -38,4 +38,4 @@ removedat:
 
 removeim:
 	@rm -f *.pdf *.png *.jpg *.jpeg
-@echo "Image files removed!"
+    @echo "Image files removed!"

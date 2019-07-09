@@ -1,19 +1,19 @@
 // ==================================================================
-// File:    Skeleton for C++ files
+// File:    skeleton.cpp
 // Author:  Erik Johannes Husom
 // Created: 2019-06-19
 // ------------------------------------------------------------------
 // Description:
-//
+// Skeleton for C++ files.
 // ==================================================================
-
+#include <cmath>
 #include <iostream>
 #include <fstream>
-#include <cmath>
+#include "time.h"
 using namespace std;
 
 int main(int argc, char *argv[])
 {
 
-  return 0;
+    return 0;
 } // end of main function
