@@ -128,9 +128,14 @@ if [ -d "$HOME/dotfiles/bin" ] ; then
     export PATH
 fi
 
+# general shortcuts
+alias x='exit'
+
 # git aliases
 alias g='git status'
 alias ga='git add'
-alias gc='git commit -m'
+alias gc='git commit'
+alias gcm='git commit -m'
 alias gp='git push'
 alias gpl='git pull'
+alias gl='git log --graph --oneline' # show git log as graph

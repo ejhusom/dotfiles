@@ -121,11 +121,15 @@ augroup snippets
     autocmd BufNewFile references.bib 0r ~/.vim/snippets/references.bib
 augroup END
 
+" Infile skeletons
 nnoremap ,makelatex :0r ~/.vim/snippets/makelatex<CR>
 nnoremap ,makemarkdown :0r ~/.vim/snippets/makemarkdown<CR>
 nnoremap ,makec :0r ~/.vim/snippets/makec<CR>
 nnoremap ,makecpp :0r ~/.vim/snippets/makecpp<CR>
 nnoremap ,bash :0r ~/.vim/snippets/bashskeleton<CR><S-g>
+
+" Abbreviation commands
+inoremap ,ct ```<CR>
 
 " This file is not a part of the dotfiles-repo:
 :source ~/dotfiles/snippets/abbreviations.vim 
