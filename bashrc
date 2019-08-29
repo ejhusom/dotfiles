@@ -115,9 +115,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
 
 ##################################
 ###### PERSONAL BASH CONFIG ######
@@ -139,3 +136,21 @@ alias gcm='git commit -m'
 alias gp='git push'
 alias gpl='git pull'
 alias gl='git log --graph --oneline' # show git log as graph
+alias gall='find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd
+{} && git status -s && echo)'' # check git status of all subfolders
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/ejhusom/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/ejhusom/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/ejhusom/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/ejhusom/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
