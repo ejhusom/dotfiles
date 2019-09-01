@@ -136,8 +136,8 @@ alias gcm='git commit -m'
 alias gp='git push'
 alias gpl='git pull'
 alias gl='git log --graph --oneline' # show git log as graph
-alias gall='find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && cd
-{} && git status -s && echo)'' # check git status of all subfolders
+alias gall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && \
+    cd {} && git status -s && echo)' \;" # check git status of all subfolders
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
