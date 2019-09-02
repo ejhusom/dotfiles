@@ -24,6 +24,7 @@ set showmatch               " highlight matching parenthesis
 set clipboard=unnamedplus   " something with copy/paste?
 set linebreak               " do not break lines in middle of a word
 set textwidth=79            " max line width
+au BufRead,BufNewFile *.html setlocal textwidth=0 " unlimited line length in html-files
 "set mouse=a                 " enable mouse in all modes
 
 """"""""""""""""""""""""""""""""""
