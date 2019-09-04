@@ -116,6 +116,7 @@ augroup snippets
     autocmd BufNewFile *.cpp 0r ~/.vim/snippets/skeleton.cpp
     autocmd BufNewFile *.py 0r ~/.vim/snippets/skeleton.py
     autocmd BufNewFile *.vim 0r ~/.vim/snippets/skeleton.vim
+    autocmd BufNewFile *.html 0r ~/.vim/snippets/skeleton.html
     autocmd BufNewFile README.md 0r ~/.vim/snippets/README.md
     autocmd BufNewFile report.tex 0r ~/.vim/snippets/report.tex
     autocmd BufNewFile report.md 0r ~/.vim/snippets/report.md
