@@ -30,4 +30,4 @@ $(PDF): $(DOC_NAME).tex #$(FIG_DIR)/%.pdf $(FIG_DIR)%.png
 clean:
 	@rm -rf *.aux *.bbl *.blg *.log *.out *.toc
 	@rm -rf $(DOC_NAME).pdf
-@echo "Cleanup complete!"
+    @echo "Cleanup complete!"
