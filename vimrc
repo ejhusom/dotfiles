@@ -25,6 +25,7 @@ set clipboard=unnamedplus   " something with copy/paste?
 set linebreak               " do not break lines in middle of a word
 set textwidth=79            " max line width
 au BufRead,BufNewFile *.html setlocal textwidth=0 " unlimited line length in html-files
+set foldmethod=indent       " folds at indent
 "set mouse=a                 " enable mouse in all modes
 
 """"""""""""""""""""""""""""""""""
@@ -121,6 +122,7 @@ augroup snippets
     autocmd BufNewFile report.tex 0r ~/.vim/snippets/report.tex
     autocmd BufNewFile report.md 0r ~/.vim/snippets/report.md
     autocmd BufNewFile references.bib 0r ~/.vim/snippets/references.bib
+    autocmd BufNewFile .gitignore 0r ~/.vim/snippets/.gitignore
 augroup END
 
 " Infile skeletons
