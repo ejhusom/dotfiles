@@ -19,7 +19,7 @@ display_help() {
     echo "      | docs/"
     echo "      | | figs/"
     echo "      | | Makefile"
-    echo "      | | report.md"
+    echo "      | | report.tex"
     echo "      | | references.bib"
     echo "      | include/"
     echo "      | src/"
@@ -41,7 +41,7 @@ setup_project () {
     cd docs/
     mkdir figs/
     vim -c "wq" Makefile
-    vim -c "wq" report.md
+    vim -c "wq" report.tex
     vim -c "wq" references.bib
     cd ..
     git init
