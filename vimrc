@@ -25,8 +25,16 @@ set clipboard=unnamedplus   " something with copy/paste?
 set linebreak               " do not break lines in middle of a word
 set textwidth=79            " max line width
 au BufRead,BufNewFile *.html setlocal textwidth=0 " unlimited line length in html-files
-autocmd Filetype python set foldmethod=indent       " folds at indent
 "set mouse=a                 " enable mouse in all modes
+
+
+""""""""""""""""""""""""""""""""""
+" Folding
+""""""""""""""""""""""""""""""""""
+autocmd Filetype python set foldmethod=indent       " folds at indent in python files
+nnoremap zx :set foldlevel=20<CR>
+nnoremap zz :set foldlevel=0<CR>
+
 
 """"""""""""""""""""""""""""""""""
 " Tab indentation
