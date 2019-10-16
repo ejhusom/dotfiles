@@ -28,3 +28,12 @@ iab begintable \begin{table}
     \<CR>\end{table}
     \<Esc>3kA<C-R>=Eatchar('\s')<CR>
 
+iab beginequation \begin{equation}
+    \<CR>
+    \<CR>\end{equation}
+    \<Esc>kA<C-R>=Eatchar('\s')<CR>
+
+iab beginalign \begin{align}
+    \<CR>
+    \<CR>\end{align}
+    \<Esc>kA<C-R>=Eatchar('\s')<CR>
