@@ -9,6 +9,9 @@
 " Datestamp
 :iab <expr> dts strftime("%Y-%m-%d %A %T")
 
+" Python
+iab inp import numpy as np
+
 " LaTeX
 iab beginfigure \begin{figure}
     \<CR>   \includegraphics[width=\linewidth]{}
