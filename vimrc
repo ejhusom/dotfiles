@@ -175,3 +175,11 @@ let g:netrw_liststyle=3     " tree view
 let g:netrw_winsize = 25    " sets width of explorer to 25% of the page
 " let g:netrw_list_hide=netrw_gitignore#Hide()
 " let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
+
+""""""""""""""""""""""""""""""""""
+" Comment/uncomment
+""""""""""""""""""""""""""""""""""
+source ~/.vim/comment.vim
+map <C-a> :call Comment()<CR>
+map <C-b> :call Uncomment()<CR>
