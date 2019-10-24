@@ -1,23 +1,44 @@
-# executables
-*.exe
-*.x
+# compiled files:
+build*
+*.o
+*.so
+*.a
 
 # data-files
 *.dat
 *.txt
 *.csv
 
-# images
-*.png
-*.jpg
-*.jpeg
-*.pdf
+# doconce:
+.*_html_file_collection
 
-# compiled files:
-build*
-*.o
-*.so
-*.a
+# eclipse files:
+*.cproject
+*.project
+
+# executables
+*.exe
+*.x
+
+# images
+#*.png
+#*.jpg
+#*.jpeg
+#*.pdf
+
+# misc:
+.DS_Store
+Trash
+*.copyright
+*.copyright
+*.exerinfo
+*.exerinfo
+*.dlog
+*.user
+
+# python
+__pycache__
+.ipynb*
 
 # temporary files:
 *.pyc
@@ -43,20 +64,3 @@ temp*
 *.snm
 *.vrb
 
-# eclipse files:
-*.cproject
-*.project
-
-
-# doconce:
-.*_html_file_collection
-
-# misc:
-.DS_Store
-Trash
-*.copyright
-*.copyright
-*.exerinfo
-*.exerinfo
-*.dlog
-*.user
