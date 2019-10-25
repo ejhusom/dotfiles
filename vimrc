@@ -143,7 +143,6 @@ nnoremap ,bash :0r ~/.vim/snippets/bashskeleton<CR><S-g>
 " Abbreviation commands
 inoremap ,ct ```<CR>
 
-" This file is not a part of the dotfiles-repo:
 :source ~/dotfiles/snippets/abbreviations.vim 
 
 " Function for removing trailing whitespace '\s' in abbreviations:
