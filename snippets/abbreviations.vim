@@ -9,9 +9,6 @@
 " Datestamp
 :iab <expr> dts strftime("%Y-%m-%d %A %T")
 
-" Python
-iab inp import numpy as np
-
 " LaTeX
 iab beginfigure \begin{figure}
     \<CR>   \includegraphics[width=\linewidth]{}
@@ -40,3 +37,7 @@ iab beginalign \begin{align}
     \<CR>
     \<CR>\end{align}
     \<Esc>kA<C-R>=Eatchar('\s')<CR>
+
+" Markdown
+inoremap ,ct ```<CR>
+
