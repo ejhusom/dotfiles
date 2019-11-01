@@ -13,12 +13,16 @@ class ClassName():
     attribute : float
        Description.
 
-       array[float]
-          Description.
+    array[float]
+       Description.
 
 
     Notes
     -----
+
+    
+    References
+    ----------
 
 
     Example

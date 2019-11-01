@@ -139,8 +139,8 @@ nnoremap ,makemarkdown :0r ~/.vim/snippets/makemarkdown<CR>
 nnoremap ,makec :0r ~/.vim/snippets/makec<CR>
 nnoremap ,makecpp :0r ~/.vim/snippets/makecpp<CR>
 nnoremap ,bash :0r ~/.vim/snippets/bashskeleton<CR><S-g>
-nnoremap ,function .0r ~.vim/snippets/function.py<CR>
-nnoremap ,class .0r ~.vim/snippets/class.py<CR>
+nnoremap ,function :r ~/.vim/snippets/function.py<CR>
+nnoremap ,class :r ~/.vim/snippets/class.py<CR>
 
 " Abbreviation commands
 inoremap ,ct ```<CR>
