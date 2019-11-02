@@ -26,6 +26,11 @@ build*
 #*.jpeg
 #*.pdf
 
+# jekyll
+#_site/
+.sass-cache
+.jekyll-metadata
+
 # misc:
 .DS_Store
 Trash
