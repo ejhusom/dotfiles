@@ -183,7 +183,9 @@ let g:netrw_winsize = 25    " sets width of explorer to 25% of the page
 """"""""""""""""""""""""""""""""""
 " Vim scripts
 """"""""""""""""""""""""""""""""""
-" Comment/uncomment
-source ~/.vim/vimscripts/comment.vim
 " Visual serach with *
 source ~/.vim/vimscripts/visual-star.vim
+" Comment/uncomment with gc[motion]
+source ~/.vim/vimscripts/commentary.vim
+" Entire file as text object
+"source ~/.vim/vimscripts/entire.vim
