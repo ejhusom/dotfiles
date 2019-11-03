@@ -181,6 +181,6 @@ let g:netrw_winsize = 25    " sets width of explorer to 25% of the page
 """"""""""""""""""""""""""""""""""
 " Comment/uncomment
 """"""""""""""""""""""""""""""""""
-source ~/.vim/comment.vim
+source ~/.vim/vimscripts/comment.vim
 map <C-a> :call Comment()<CR>
 map <C-b> :call Uncomment()<CR>
