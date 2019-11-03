@@ -69,3 +69,5 @@ temp*
 *.snm
 *.vrb
 
+# vim
+Session.vim
