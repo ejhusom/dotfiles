@@ -1,22 +1,6 @@
 [alias]
     l = log --pretty=oneline --graph --abbrev-commit
 
-[color]
-    ui = true
-[color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
-[color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red
-  new = green
-[color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
-
 [core]
 	editor = vim
 

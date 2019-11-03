@@ -1,10 +1,11 @@
 " ===================================================================
 " File:     comment.vim
-" Author:   Erik Johannes Husom
 " Created:  2019-10-22
 " -------------------------------------------------------------------
 " Description: Functions for fast comment/uncomment.
 " ===================================================================
+map <C-d> :call Comment()<CR>
+map <C-b> :call Uncomment()<CR>
 
 function! Comment()
   let ext = tolower(expand('%:e'))
@@ -12,7 +13,7 @@ function! Comment()
     silent s/^/\#/
   elseif ext == 'js' || ext == 'c' || ext == 'cpp'
     silent s:^:\/\/:g
-  elseif ext == 'vim'
+  elseif ext == 'vim' || 'vimrc'
     silent s:^:\":g
   endif
 endfunction

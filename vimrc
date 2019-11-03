@@ -2,6 +2,7 @@
 " File:     Vim configuration
 " Author:   Erik Johannes Husom
 " Created:  2018-10-13
+" Version:  2.0
 " -------------------------------------------------------------------
 " Description: General configuration for Vim on UNIX.
 " Tips:
@@ -15,6 +16,7 @@
 """"""""""""""""""""""""""""""""""
 " General
 """"""""""""""""""""""""""""""""""
+set nocompatible
 syntax on                   " syntax highlighting
 filetype indent plugin on   " determine file type and use auto-indenting
 set scrolloff=7             " number of lines above/below cursor when scrolling
@@ -179,8 +181,9 @@ let g:netrw_winsize = 25    " sets width of explorer to 25% of the page
 
 
 """"""""""""""""""""""""""""""""""
-" Comment/uncomment
+" Vim scripts
 """"""""""""""""""""""""""""""""""
+" Comment/uncomment
 source ~/.vim/vimscripts/comment.vim
-map <C-a> :call Comment()<CR>
-map <C-b> :call Uncomment()<CR>
+" Visual serach with *
+source ~/.vim/vimscripts/visual-star.vim
