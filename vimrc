@@ -181,11 +181,15 @@ let g:netrw_winsize = 25    " sets width of explorer to 25% of the page
 
 
 """"""""""""""""""""""""""""""""""
+" User-defined keymappings
+""""""""""""""""""""""""""""""""""
+" Visual select entire file
+nnoremap <C-h> ggVG
+
+""""""""""""""""""""""""""""""""""
 " Vim scripts
 """"""""""""""""""""""""""""""""""
 " Visual serach with *
 source ~/.vim/vimscripts/visual-star.vim
 " Comment/uncomment with gc[motion]
 source ~/.vim/vimscripts/commentary.vim
-" Entire file as text object
-"source ~/.vim/vimscripts/entire.vim
