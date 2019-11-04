@@ -133,6 +133,7 @@ alias g='git status'
 alias ga='git add'
 alias gc='git commit'
 alias gcm='git commit -m'
+alias gd='git diff'
 alias gp='git push'
 alias gpl='git pull'
 alias gl='git log --graph --oneline' # show git log as graph
