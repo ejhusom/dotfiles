@@ -127,6 +127,11 @@ fi
 
 # general shortcuts
 alias x='exit'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
 
 # git aliases
 alias g='git status'
