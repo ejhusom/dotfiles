@@ -4,13 +4,13 @@ def function():
     Parameters
     ----------
     parameter : float
-      Description.
+        Description.
 
 
     Returns
     -------
     array[float]
-       Description.
+        Description.
 
 
     Notes
