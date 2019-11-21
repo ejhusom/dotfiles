@@ -127,11 +127,18 @@ fi
 
 # general shortcuts
 alias x='exit'
+alias xo='xdg-open'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
+
+# vim aliases
+alias v='vim .'
+
+# ranger aliases
+alias r='ranger'
 
 # git aliases
 alias g='git status'

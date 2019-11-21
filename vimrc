@@ -34,8 +34,6 @@ set mouse=a                 " enable mouse in all modes
 """"""""""""""""""""""""""""""""""
 " Folding
 """"""""""""""""""""""""""""""""""
-nnoremap zx :set foldlevel=20<CR>
-nnoremap z< :set foldlevel=0<CR>
 autocmd Filetype python set foldmethod=indent       " folds at indent in python files
 " set foldmethod=manual
 set foldcolumn=1
