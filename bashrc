@@ -138,7 +138,7 @@ alias ......='cd ../../../../..'
 alias v='vim .'
 
 # ranger aliases
-alias r='ranger'
+alias r='ranger-cd'
 
 # git aliases
 alias g='git status'
@@ -167,3 +167,13 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Ranger cd to last used directory on quit
+function ranger-cd {
+    tempfile="$(mktemp -t tmp.XXXXXX)"
+    /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    test -f "$tempfile" &&
+    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+        cd -- "$(cat "$tempfile")"
+    fi
+    rm -f -- "$tempfile"
+}

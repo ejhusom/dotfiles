@@ -30,7 +30,9 @@ display_help() {
 run () {
     # Timing program, and writing both the output and the timing into the same
     # file, which is given a unique filename based on the current time.
-    ( time ./$1 ) > `date +'%Y%m%d-%H%M%S.txt'` 2>&1
+    filename=`date +'%Y%m%d-%H%M%S.txt'`
+    ( time ./$1 ) > $filename 2>&1
+    cat $filename
 }
 
 
