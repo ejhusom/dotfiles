@@ -1,0 +1,45 @@
+#!/bin/bash
+# ===================================================================
+# File:     run
+# Author:   Erik Johannes Husom
+# Created:  2019-11-21
+# -------------------------------------------------------------------
+# Description: Run a program/script, time it, and write all the output,
+# including the timing info, to a file.
+# ===================================================================
+
+display_help() {
+    
+    echo "Run"
+    echo
+    echo "Usage: run [options]"
+    echo "   or: run [arguments]"
+    echo
+    echo "Arguments:"
+    echo "  -h, --help      Print Help (this message)"
+    echo
+    echo "Description:"
+    echo "  Run a program/script, time it, and write all the output, including
+    timing info to a file."
+    echo
+
+    exit 0
+
+}
+
+run () {
+    # Timing program, and writing both the output and the timing into the same
+    # file, which is given a unique filename based on the current time.
+    ( time ./$1 ) > `date +'%Y%m%d-%H%M%S.txt'` 2>&1
+}
+
+
+if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+    display_help
+elif [ $# -gt 0 ]; then
+    run $1
+else
+    echo "Give program to be run as argument."
+fi
+
+
