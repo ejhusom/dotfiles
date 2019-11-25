@@ -17,7 +17,7 @@
 set nocompatible            " use vim, not vi api
 syntax on                   " syntax highlighting
 filetype indent plugin on   " determine file type and use auto-indenting
-set scrolloff=7             " number of lines above/below cursor when scrolling
+" set scrolloff=7             " number of lines above/below cursor when scrolling
 set number                  " line numbers
 set wildmenu                " autocomplete menu
 set showmatch               " highlight matching parenthesis
