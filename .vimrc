@@ -28,6 +28,10 @@ set textwidth=79            " max line width
 au BufRead,BufNewFile *.html setlocal textwidth=0 " unlimited line length in html-files
 set mouse=a                 " enable mouse in all modes
 set ruler                   " always show cursor
+set cursorline              " highlight current line
+set visualbell              " remove sound at mistype
+" autocmd BufWinEnter * highlight ColorColumn ctermbg=grey
+set colorcolumn=80          " highlight column 80
 " }}}
 
 " Folding{{{
@@ -157,7 +161,6 @@ nmap ,hc :RunSilent pandoc -o /tmp/vim-pandoc-out.html -s --mathml % && xdg-open
 "}}}
 
 " File browsing{{{
-""""""""""""""""""""""""""""""""""
 " - Help on file browsing: `:help netrw-quickmap`
 
 let g:netrw_banner=0        " disable annoying banner
@@ -170,15 +173,13 @@ let g:netrw_winsize = 25    " sets width of explorer to 25% of the page
 "}}}
 
 " User-defined keymappings{{{
-""""""""""""""""""""""""""""""""""
-" Visual select entire file
-nnoremap <C-h> ggVG
+nnoremap <C-h> ggVG     " Visual select entire file
 "}}}
 
 " Vim scripts{{{
-""""""""""""""""""""""""""""""""""
-" Visual serach with *
+" Visual search with *
 source ~/.vim/vimscripts/visual-star.vim
 " Comment/uncomment with gc[motion]
 source ~/.vim/vimscripts/commentary.vim"
 "}}}
+
