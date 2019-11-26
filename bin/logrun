@@ -1,6 +1,6 @@
 #!/bin/bash
 # ===================================================================
-# File:     run
+# File:     logrun
 # Author:   Erik Johannes Husom
 # Created:  2019-11-21
 # -------------------------------------------------------------------
@@ -27,7 +27,7 @@ display_help() {
 
 }
 
-run () {
+logrun () {
     # Timing program, and writing both the output and the timing into the same
     # file, which is given a unique filename based on the current time.
     filename=`date +'%Y%m%d-%H%M%S.txt'`
@@ -39,7 +39,7 @@ run () {
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
     display_help
 elif [ $# -gt 0 ]; then
-    run $1
+    logrun $1
 else
     echo "Give program to be run as argument."
 fi
