@@ -30,8 +30,10 @@ set mouse=a                 " enable mouse in all modes
 set ruler                   " always show cursor
 set cursorline              " highlight current line
 set visualbell              " remove sound at mistype
+set splitbelow
+set splitright
 " autocmd BufWinEnter * highlight ColorColumn ctermbg=grey
-set colorcolumn=80          " highlight column 80
+" set colorcolumn=80          " highlight column 80
 " }}}
 
 " Folding{{{
@@ -166,7 +168,7 @@ nmap ,hc :RunSilent pandoc -o /tmp/vim-pandoc-out.html -s --mathml % && xdg-open
 let g:netrw_banner=0        " disable annoying banner
 let g:netrw_browse_split=2  " open in vertical split
 let g:netrw_altv=1          " open splits to the right
-let g:netrw_liststyle=3     " tree view
+let g:netrw_liststyle=1     " tree view
 let g:netrw_winsize = 25    " sets width of explorer to 25% of the page
 " let g:netrw_list_hide=netrw_gitignore#Hide()
 " let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'

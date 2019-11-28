@@ -31,7 +31,8 @@ logrun () {
     # Timing program, and writing both the output and the timing into the same
     # file, which is given a unique filename based on the current time.
     filename=`date +'%Y%m%d-%H%M%S.txt'`
-    ( time ./$1 ) > $filename 2>&1
+    # ( time ./$1 ${@:2}) > $filename 2>&1
+    ( time ./$1 ${@:2}) | tee $filename
     cat $filename
 }
 
@@ -39,7 +40,7 @@ logrun () {
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
     display_help
 elif [ $# -gt 0 ]; then
-    logrun $1
+    logrun $@
 else
     echo "Give program to be run as argument."
 fi
