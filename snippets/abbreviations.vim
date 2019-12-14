@@ -43,6 +43,7 @@ iab beginalign \begin{align}
     \<Esc>kA<C-R>=Eatchar('\s')<CR>
 
 inoreabbrev \h \hat{}<Esc>i<C-R>=Eatchar('\s')<CR>
+inoreabbrev bs \boldsymbol{}<Esc>i<C-R>=Eatchar('\s')<CR>
 "}}}
 
 
