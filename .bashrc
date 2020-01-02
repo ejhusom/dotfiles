@@ -88,7 +88,7 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alF --block-size=1K'  # show file size in kB
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -122,6 +122,12 @@ fi
 # set PATH so it includes bin from dotfiles
 if [ -d "$HOME/dotfiles/bin" ] ; then
     PATH="$HOME/dotfiles/bin:$PATH"
+    export PATH
+fi
+
+# set PATH so it includes ~/Applications if it exists
+if [ -d "$HOME/Applications" ] ; then
+    PATH="$HOME/Applications:$PATH"
     export PATH
 fi
 
