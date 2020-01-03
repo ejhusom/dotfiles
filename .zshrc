@@ -1,0 +1,58 @@
+# some more ls aliases
+alias ll='ls -alFk'  # show file size in kB
+# alias ll='ls -alF --block-size=1K'  # show file size in kB
+alias la='ls -A'
+alias l='ls -CF'
+
+##################################
+###### PERSONAL BASH CONFIG ######
+
+# set PATH so it includes bin from dotfiles
+if [ -d "$HOME/dotfiles/bin" ] ; then
+    PATH="$HOME/dotfiles/bin:$PATH"
+    export PATH
+fi
+
+# set PATH so it includes ~/Applications if it exists
+if [ -d "$HOME/Applications" ] ; then
+    PATH="$HOME/Applications:$PATH"
+    export PATH
+fi
+
+# general shortcuts
+alias x='exit'
+alias xo='xdg-open'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+# vim aliases
+alias v='vim .'
+
+# ranger aliases
+alias r='ranger-cd'
+
+# git aliases
+alias g='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gd='git diff'
+alias gp='git push'
+alias gpl='git pull'
+alias gl='git log --graph --oneline' # show git log as graph
+alias gall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && \
+    cd {} && git status -s && echo)' \;" # check git status of all subfolders
+
+# Ranger cd to last used directory on quit
+function ranger-cd {
+    tempfile="$(mktemp -t tmp.XXXXXX)"
+    /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    test -f "$tempfile" &&
+    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+        cd -- "$(cat "$tempfile")"
+    fi
+    rm -f -- "$tempfile"
+}
