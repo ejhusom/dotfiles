@@ -24,3 +24,11 @@ PROMPT+=\$vcs_info_msg_0_
 zstyle ':vcs_info:git:*' formats '%F{230}(%b)%r%f '
 zstyle ':vcs_info:*' enable git
 #}}}
+
+# aliases{{{
+alias xdg-open="open"
+#}}}
+
+# vim bindings{{{
+bindkey -v
+#}}}

@@ -158,8 +158,14 @@ endfunc
 command! -nargs=* RunSilent
       \ | execute ':silent !'.'<args>'
       \ | execute ':redraw!'
-nmap ,pc :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf % && xdg-open /tmp/vim-pandoc-out.pdf<CR>
-nmap ,hc :RunSilent pandoc -o /tmp/vim-pandoc-out.html -s --mathml % && xdg-open /tmp/vim-pandoc-out.html<CR>
+
+if system('uname -s') == "Darwin\n"
+    nmap ,pc :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf % && open /tmp/vim-pandoc-out.pdf<CR>
+    nmap ,hc :RunSilent pandoc -o /tmp/vim-pandoc-out.html -s --mathml % && open /tmp/vim-pandoc-out.html<CR>
+else
+    nmap ,pc :!pandoc -o /tmp/vim-pandoc-out.pdf % && xdg-open /tmp/vim-pandoc-out.pdf<CR>
+    nmap ,hc :!pandoc -o /tmp/vim-pandoc-out.html -s --mathml % && xdg-open /tmp/vim-pandoc-out.html<CR>
+endif
 "}}}
 
 " File browsing{{{
