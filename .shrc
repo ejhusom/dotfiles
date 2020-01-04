@@ -53,3 +53,6 @@ function ranger-cd {
     fi
     rm -f -- "$tempfile"
 }
+
+# homebrew not update for every install
+HOMEBREW_NO_AUTO_UPDATE=1
