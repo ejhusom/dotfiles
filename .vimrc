@@ -21,7 +21,6 @@ filetype indent plugin on   " determine file type and use auto-indenting
 set number                  " line numbers
 set wildmenu                " autocomplete menu
 set showmatch               " highlight matching parenthesis
-set clipboard=unnamedplus   " something with copy/paste?
 set history=200             " record longer command history (default=50)
 set linebreak               " do not break lines in middle of a word
 set textwidth=79            " max line width
@@ -35,6 +34,23 @@ set splitright
 " autocmd BufWinEnter * highlight ColorColumn ctermbg=grey
 " set colorcolumn=80          " highlight column 80
 " }}}
+
+" Copy/paste{{{
+if system('uname -s') == "Darwin\n"
+  "OSX
+  set clipboard=unnamed
+else
+  "Linux
+  set clipboard=unnamedplus
+endif
+
+" The following keymappings work on Unix for copying/pasting from system
+" clipboard, without having to use the + and * registers. Also, normal
+" control/command and c/v is very slow for large chunks of text, so this works
+" better.
+vmap <C-y> :w !pbcopy<CR><CR>
+nmap <C-p> :r !pbpaste<CR><CR>
+"}}}
 
 " Folding{{{
 set foldmethod=marker
