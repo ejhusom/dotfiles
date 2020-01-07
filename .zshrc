@@ -30,5 +30,8 @@ alias xdg-open="open"
 #}}}
 
 # vim bindings{{{
-bindkey -v
+#bindkey -v
 #}}}
+
+
+
