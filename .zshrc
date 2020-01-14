@@ -1,13 +1,15 @@
-# zsh configuration
+# File:         .zsh
+# Author:       Erik Johannes Husom
+# Description:  zsh configuration
+# ============================================================================
 
-# common shell config (bash + zsh){{{
+# Common shell config (bash + zsh){{{
 if [ -r ~/dotfiles/.shrc ]; then
    source ~/dotfiles/.shrc
 fi
 #}}}
 
-# prompt{{{
-# PROMPT='%B%F{#cc0000}%m%f %F{#4e79af}%~%f %# %b'
+# Prompt{{{
 PROMPT='%B%F{#af5b4e}%n%f@%F{#4eaf82}%m %F{#4e79af}%~%f %# %b'
 
 # Enable themes
@@ -16,7 +18,6 @@ promptinit
 
 # git status{{{
 # Info: https://arjanvandergaag.nl/blog/customize-zsh-prompt-with-vcs-info.html
-#
 # %s    The current version control system, like git or svn.
 # %r    The name of the root directory of the repository
 # %S    The current path relative to the repository root directory

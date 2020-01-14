@@ -1,9 +1,9 @@
-# some more ls aliases
-alias ll='ls -AhlF'  # show file size in kB
-# alias ll='ls -alF --block-size=1K'  # show file size in kB
-alias la='ls -A'
-alias l='ls -CF'
+# File:         .shrc
+# Author:       Erik Johannes Husom
+# Description:  General shell configuration.
+# ============================================================================
 
+# Add to PATH{{{
 # set PATH so it includes bin from dotfiles
 if [ -d "$HOME/dotfiles/bin" ] ; then
     PATH="$HOME/dotfiles/bin:$PATH"
@@ -15,8 +15,11 @@ if [ -d "$HOME/Applications" ] ; then
     PATH="$HOME/Applications:$PATH"
     export PATH
 fi
+#}}}
 
-# general shortcuts
+# Aliases{{{
+
+# general shortcuts{{{
 alias x='exit'
 alias xo='xdg-open'
 alias ..='cd ..'
@@ -24,14 +27,24 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
+#}}}
 
-# vim aliases
+# ls aliases{{{
+alias ll='ls -AhlF'  # human-readable file size
+# alias ll='ls -alF --block-size=1K'  # show file size in kB
+alias la='ls -A'
+alias l='ls -CF'
+#}}}
+
+# vim aliases{{{
 alias v='vim .'
+#}}}
 
-# ranger aliases
+# ranger aliases{{{
 alias r='ranger-cd'
+#}}}
 
-# git aliases
+# git aliases{{{
 alias g='git status'
 alias ga='git add'
 alias gc='git commit'
@@ -42,8 +55,11 @@ alias gpl='git pull'
 alias gl='git log --graph --oneline' # show git log as graph
 alias gall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && \
     cd {} && git status -s && echo)' \;" # check git status of all subfolders
+#}}}
 
-# Ranger cd to last used directory on quit
+#}}}
+
+# Ranger cd to last used directory on quit{{{
 function ranger-cd {
     tempfile="$(mktemp -t tmp.XXXXXX)"
     /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
@@ -53,7 +69,9 @@ function ranger-cd {
     fi
     rm -f -- "$tempfile"
 }
+#}}}
 
-# homebrew not update for every install
+# homebrew stuff{{{
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
+#}}}
