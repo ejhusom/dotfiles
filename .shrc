@@ -1,5 +1,5 @@
 # some more ls aliases
-alias ll='ls -AlFk'  # show file size in kB
+alias ll='ls -AhlF'  # show file size in kB
 # alias ll='ls -alF --block-size=1K'  # show file size in kB
 alias la='ls -A'
 alias l='ls -CF'
@@ -55,4 +55,5 @@ function ranger-cd {
 }
 
 # homebrew not update for every install
-HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_AUTO_UPDATE=1

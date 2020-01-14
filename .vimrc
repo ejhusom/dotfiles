@@ -15,6 +15,7 @@
 
 " General{{{
 set nocompatible            " use vim, not vi api
+set term=xterm-256color
 syntax on                   " syntax highlighting
 filetype indent plugin on   " determine file type and use auto-indenting
 " set scrolloff=7             " number of lines above/below cursor when scrolling
@@ -31,6 +32,7 @@ set cursorline              " highlight current line
 set visualbell              " remove sound at mistype
 set splitbelow
 set splitright
+let mapleader = ','
 " autocmd BufWinEnter * highlight ColorColumn ctermbg=grey
 " set colorcolumn=80          " highlight column 80
 " }}}

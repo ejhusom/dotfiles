@@ -7,8 +7,8 @@ fi
 #}}}
 
 # prompt{{{
-# PROMPT='%B%F{blue}%n@%m %~ %# %f%b'
-PROMPT='%B%F{blue}%m %~ %# %f%b'
+# PROMPT='%B%F{#cc0000}%m%f %F{#4e79af}%~%f %# %b'
+PROMPT='%B%F{#af5b4e}%m%f %F{#4e79af}%~%f %# %b'
 #}}}
 
 # add gnu coreutils{{{
@@ -20,8 +20,8 @@ autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
-PROMPT+=\$vcs_info_msg_0_
-zstyle ':vcs_info:git:*' formats '%F{230}(%b)%r%f '
+RPROMPT+=\$vcs_info_msg_0_
+zstyle ':vcs_info:git:*' formats '%F{#af8c4e}(%b)%r%f '
 zstyle ':vcs_info:*' enable git
 #}}}
 
@@ -33,5 +33,7 @@ alias xdg-open="open"
 #bindkey -v
 #}}}
 
-
-
+# ls colors{{{
+export CLICOLOR=1
+export TERM=xterm-color 
+#}}}
