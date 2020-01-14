@@ -10,7 +10,8 @@ fi
 #}}}
 
 # Prompt{{{
-
+export PS1="\[\e[31m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\] \[\e[34m\]\w\[\e[m\] \\$ "
+alias simpleprompt="PS1='\W> '"     # simple prompt
 #}}}
 
 # Default Ubuntu bash config{{{

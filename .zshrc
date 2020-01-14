@@ -10,7 +10,8 @@ fi
 #}}}
 
 # Prompt{{{
-PROMPT='%B%F{#af5b4e}%n%f@%F{#4eaf82}%m %F{#4e79af}%~%f %# %b'
+PS1='%B%F{#af5b4e}%n%f@%F{#4eaf82}%m %F{#4e79af}%~%f %# %b'
+alias simpleprompt="PS1='%~'"
 
 # Enable themes
 autoload -Uz promptinit
@@ -39,7 +40,7 @@ zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' formats '%F{#af8c4e}(%b)%u%c%F{#af8c4e}%r%f '
 zstyle ':vcs_info:*' enable git
 
-RPROMPT+=\$vcs_info_msg_0_
+RPS1+=\$vcs_info_msg_0_
 #}}}
 #}}}
 
