@@ -57,6 +57,8 @@ nmap <C-p> :r !pbpaste<CR><CR>
 " Folding{{{
 set foldmethod=marker
 autocmd Filetype python set foldmethod=indent       " folds at indent in python files
+autocmd Filetype cpp set foldmethod=syntax          " syntax folding in C++ files
+autocmd Filetype c set foldmethod=syntax            " syntax folding in C files
 let g:markdown_folding = 1
 let g:markdown_enable_folding = 1
 nnoremap <space> za                                 " toggle folding
@@ -82,7 +84,8 @@ set path+=**                " search in subfolders when using :find
 "}}}
 
 " Appearance{{{
-colorscheme pencil
+" colorscheme pencil
+colorscheme dogrun
 set background=dark
 "set foldcolumn=1           " add margin to the left
 "}}}

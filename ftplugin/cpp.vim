@@ -11,9 +11,9 @@
 """""""""""""""""""""""""""""
 
 " for-loop
-iab for for (int i = 0; i <  ; i++){<CR><CR>}<Up><Up><Esc>20li<C-R>=Eatchar('\s')<CR>
+iab ffor for (int i = 0; i <  ; i++){<CR><CR>}<Up><Up><Esc>20li<C-R>=Eatchar('\s')<CR>
 " if-test
-iab if if (){<CR><CR>}<Up><Up><Esc>4li<C-R>=Eatchar('\s')<CR>
+iab iff if (){<CR><CR>}<Up><Up><Esc>4li<C-R>=Eatchar('\s')<CR>
 " printf
 iab printf printf("%", );<Esc>4hi<C-R>=Eatchar('\s')<CR>
 " timing
