@@ -38,7 +38,8 @@ setopt prompt_subst
 zstyle ':vcs_info:git:*' stagedstr '%F{yellow}●%f'
 zstyle ':vcs_info:git:*' unstagedstr '%F{red}●%f'
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' formats '%F{#af8c4e}(%b)%u%c%F{#af8c4e}%r%f '
+# zstyle ':vcs_info:git:*' formats '%F{#af8c4e}(%b)%u%c%F{#af8c4e}%r%f '
+zstyle ':vcs_info:git:*' formats '(%b)%u%c%r'
 zstyle ':vcs_info:*' enable git
 
 RPS1+=\$vcs_info_msg_0_
