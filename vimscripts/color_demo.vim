@@ -1,3 +1,4 @@
+" Run by executing ':source color_demo.vim'
 let num = 255
 while num >= 0
     exec 'hi col_'.num.' ctermbg='.num.' ctermfg=white'

@@ -67,8 +67,8 @@ hi PmenuSel guifg=#9ea3c0 ctermfg=146 guibg=#424865 ctermbg=60
 hi PmenuSbar guibg=#292c3f ctermbg=236
 hi PmenuThumb guibg=#464f7f ctermbg=60
 hi Visual guibg=#363e7f ctermbg=61 gui=NONE cterm=NONE
-hi Search guifg=#494f8b ctermfg=60 guibg=#5d6ad8 ctermbg=62
-hi IncSearch guifg=#494f8b ctermfg=60 guibg=#5d6ad8 ctermbg=62
+hi Search guifg=#494f8b ctermfg=55 guibg=#5d6ad8 ctermbg=15
+hi IncSearch guifg=#494f8b ctermfg=55 guibg=#5d6ad8 ctermbg=15
 hi Question guifg=#73c1a9 ctermfg=79 gui=bold cterm=bold
 hi WildMenu guifg=#222433 ctermfg=235 guibg=#929be5 ctermbg=104
 hi SpellBad guifg=#f56574 ctermfg=204 gui=underline cterm=underline
