@@ -65,12 +65,33 @@ nnoremap <space> za                                 " toggle folding
 "}}}
 
 " Tab indentation{{{
+
+" General
 set tabstop=4               " four-space tab indent
 set softtabstop=4           " Vim sees 4 spaces as tab when backspacing
 set shiftwidth=4            " using < and > to indent/unindent blocks
 set expandtab               " inserts spaces instead of tab character
 set autoindent              " autoindent when creating new line
-autocmd FileType make setlocal noexpandtab " use tab (not spaces) in makefiles
+
+" CSS
+autocmd FileType css setlocal tabstop=2      
+autocmd FileType css setlocal softtabstop=2  
+autocmd FileType css setlocal shiftwidth=2   
+
+" HTML
+autocmd FileType html setlocal tabstop=2      
+autocmd FileType html setlocal softtabstop=2  
+autocmd FileType html setlocal shiftwidth=2   
+
+" JavaScript
+autocmd FileType javascript setlocal tabstop=2      
+autocmd FileType javascript setlocal softtabstop=2  
+autocmd FileType javascript setlocal shiftwidth=2   
+
+" Make
+autocmd FileType make setlocal noexpandtab  " use tab (not spaces) in makefiles
+
+
 "}}}
 
 " Searching{{{
