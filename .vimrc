@@ -79,9 +79,9 @@ autocmd FileType css setlocal softtabstop=2
 autocmd FileType css setlocal shiftwidth=2   
 
 " HTML
-autocmd FileType html setlocal tabstop=2      
-autocmd FileType html setlocal softtabstop=2  
-autocmd FileType html setlocal shiftwidth=2   
+" autocmd FileType html setlocal tabstop=2      
+" autocmd FileType html setlocal softtabstop=2  
+" autocmd FileType html setlocal shiftwidth=2   
 
 " JavaScript
 autocmd FileType javascript setlocal tabstop=2      
@@ -107,6 +107,7 @@ set path+=**                " search in subfolders when using :find
 " Appearance{{{
 " colorscheme pencil
 colorscheme dogrun
+" colorscheme darkspace
 set background=dark
 "set foldcolumn=1           " add margin to the left
 "}}}
