@@ -52,6 +52,7 @@ RPS1+=\$vcs_info_msg_0_
 
 # aliases{{{
 alias xdg-open="open"
+alias openchrome="open -a 'Google Chrome'"
 #}}}
 
 # vim bindings{{{
