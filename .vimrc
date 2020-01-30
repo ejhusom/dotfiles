@@ -26,6 +26,7 @@ set history=200             " record longer command history (default=50)
 set linebreak               " do not break lines in middle of a word
 set textwidth=79            " max line width
 au BufRead,BufNewFile *.html setlocal textwidth=0 " unlimited line length in html-files
+au BufRead,BufNewFile *.csv setlocal textwidth=0 " unlimited line length in html-files
 set mouse=a                 " enable mouse in all modes
 set ruler                   " always show cursor
 set cursorline              " highlight current line
