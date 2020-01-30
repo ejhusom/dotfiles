@@ -24,9 +24,12 @@ set wildmenu                " autocomplete menu
 set showmatch               " highlight matching parenthesis
 set history=200             " record longer command history (default=50)
 set linebreak               " do not break lines in middle of a word
+set formatoptions += t      " automatic line wrapping
 set textwidth=79            " max line width
 au BufRead,BufNewFile *.html setlocal textwidth=0 " unlimited line length in html-files
 " au BufRead,BufNewFile *.csv setlocal textwidth=0 " unlimited line length in html-files
+set colorcolumn=80
+highlight ColorColumn ctermbg=darkgray
 set mouse=a                 " enable mouse in all modes
 set ruler                   " always show cursor
 set cursorline              " highlight current line
@@ -244,6 +247,10 @@ nnoremap <C-h> ggVG     " Visual select entire file
 " Visual search with *
 source ~/.vim/vimscripts/visual-star.vim
 " Comment/uncomment with gc[motion]
-source ~/.vim/vimscripts/commentary.vim"
+source ~/.vim/vimscripts/commentary.vim
+" Open URL
+source ~/.vim/vimscripts/handle_url.vim
+" Switch from source to header
+source ~/.vim/vimscripts/switchsourceheader.vim
 "}}}
 
