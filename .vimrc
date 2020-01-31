@@ -24,7 +24,7 @@ set wildmenu                " autocomplete menu
 set showmatch               " highlight matching parenthesis
 set history=200             " record longer command history (default=50)
 set linebreak               " do not break lines in middle of a word
-set formatoptions += t      " automatic line wrapping
+set formatoptions+=t      " automatic line wrapping
 set textwidth=79            " max line width
 au BufRead,BufNewFile *.html setlocal textwidth=0 " unlimited line length in html-files
 " au BufRead,BufNewFile *.csv setlocal textwidth=0 " unlimited line length in html-files
@@ -54,7 +54,7 @@ endif
 " clipboard, without having to use the + and * registers. Also, normal
 " control/command and c/v is very slow for large chunks of text, so this works
 " better.
-vmap <C-y> :w !pbcopy<CR><CR>
+nmap <C-y> :w !pbcopy<CR><CR>
 nmap <C-p> :r !pbpaste<CR><CR>
 "}}}
 
@@ -91,9 +91,9 @@ autocmd FileType css setlocal shiftwidth=2
 " autocmd FileType html setlocal shiftwidth=2   
 
 " JavaScript
-autocmd FileType javascript setlocal tabstop=2      
-autocmd FileType javascript setlocal softtabstop=2  
-autocmd FileType javascript setlocal shiftwidth=2   
+autocmd FileType javascript setlocal tabstop=4
+autocmd FileType javascript setlocal softtabstop=4 
+autocmd FileType javascript setlocal shiftwidth=4
 
 " Make
 autocmd FileType make setlocal noexpandtab  " use tab (not spaces) in makefiles
