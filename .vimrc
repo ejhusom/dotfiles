@@ -37,6 +37,7 @@ set visualbell              " remove sound at mistype
 set splitbelow
 set splitright
 let mapleader = ','
+execute pathogen#infect()
 " autocmd BufWinEnter * highlight ColorColumn ctermbg=grey
 " set colorcolumn=80          " highlight column 80
 " }}}
@@ -127,54 +128,6 @@ set background=dark
 "set foldcolumn=1           " add margin to the left
 "}}}
 
-" Statusline{{{
-""""""""""""""""""""""""""""""""""
-" Blue theme:
-"hi User1 ctermfg=007 ctermbg=004
-"hi User2 ctermfg=012 ctermbg=238
-" Cream white theme:
-hi User1 ctermfg=000 ctermbg=007
-hi User2 ctermfg=007 ctermbg=238
-hi User3 ctermfg=000 ctermbg=007
-
-set laststatus=2                            " show statusline
-"set noshowmode
-set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
-set statusline+=%#DiffChange#%{(mode()=='i')?'\ \ INSERT\ ':''}
-set statusline+=%#DiffDelete#%{(mode()=='r')?'\ \ RPLACE\ ':''}
-set statusline+=%#Cursor#%{(mode()=='v')?'\ \ VISUAL\ ':''}
-set statusline+=%#Cursor#%{(mode()=='V')?'\ \ V-LINE\ ':''}
-"set statusline+=%#Cursor#%{(mode()=='CTRL-V')?'\ \ V-BLOCK\ ':''}
-set statusline+=%{&paste?'\ \ PASTE\ ':''}
-set statusline+=%{&spell?'\ \ SPELL\ ':''}
-
-set statusline+=%1*                         " color
-set statusline+=\ %t\                       " file name
-set statusline+=%R                          " readonly flag
-set statusline+=%M\                         " status flag for modified file
-
-set statusline+=%2*                         " color
-set statusline+=\ %<%F\                     " path to file
-
-set statusline+=%=                          " switch to right side
-set statusline+=%3*                         " color
-set statusline+=\ %8{&fileencoding?&fileencoding:&encoding}\  " encoding
-
-set statusline+=𐌂                           " ornament 
-"set statusline+=\|                         " ornament 
-set statusline+=\ %Y\                       "file type
-
-set statusline+=%3*                         " color
-set statusline+=\|                          " ornament 
-set statusline+=\ %3l:%-2c\                 " line and column number
-
-set statusline+=%3*                         " color
-set statusline+=\|                          " ornament 
-set statusline+=\ %3p%%\                    " percentage of file
-set statusline+=\|                          " ornament 
-set statusline+=\ %LL\                      " total number of lines
-"}}}
-
 " Snippets and skeletons{{{
 augroup snippets
     autocmd BufNewFile *.c 0r ~/.vim/snippets/skeleton.c
@@ -254,3 +207,56 @@ source ~/.vim/vimscripts/handle_url.vim
 source ~/.vim/vimscripts/switchsourceheader.vim
 "}}}
 
+" Git time metric{{{
+let g:gtm_plugin_status_enabled = 1
+"}}}
+
+" Statusline{{{
+""""""""""""""""""""""""""""""""""
+" Blue theme:
+"hi User1 ctermfg=007 ctermbg=004
+"hi User2 ctermfg=012 ctermbg=238
+" Cream white theme:
+hi User1 ctermfg=000 ctermbg=007
+hi User2 ctermfg=007 ctermbg=238
+hi User3 ctermfg=000 ctermbg=007
+
+set laststatus=2                            " show statusline
+"set noshowmode
+set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
+set statusline+=%#DiffChange#%{(mode()=='i')?'\ \ INSERT\ ':''}
+set statusline+=%#DiffDelete#%{(mode()=='r')?'\ \ RPLACE\ ':''}
+set statusline+=%#Cursor#%{(mode()=='v')?'\ \ VISUAL\ ':''}
+set statusline+=%#Cursor#%{(mode()=='V')?'\ \ V-LINE\ ':''}
+"set statusline+=%#Cursor#%{(mode()=='CTRL-V')?'\ \ V-BLOCK\ ':''}
+set statusline+=%{&paste?'\ \ PASTE\ ':''}
+set statusline+=%{&spell?'\ \ SPELL\ ':''}
+
+set statusline+=%1*                         " color
+set statusline+=\ %t\                       " file name
+set statusline+=%R                          " readonly flag
+set statusline+=%M\                         " status flag for modified file
+
+set statusline+=%2*                         " color
+set statusline+=\ %<%F\                     " path to file
+
+
+set statusline+=%=                          " switch to right side
+set statusline+=%{exists('*GTMStatusline')?'['.GTMStatusline().']':''}\  " displaying gtm metrics
+set statusline+=%3*                         " color
+set statusline+=\ %8{&fileencoding?&fileencoding:&encoding}\  " encoding
+
+set statusline+=𐌂                           " ornament 
+"set statusline+=\|                         " ornament 
+set statusline+=\ %Y\                       "file type
+
+set statusline+=%3*                         " color
+set statusline+=\|                          " ornament 
+set statusline+=\ %3l:%-2c\                 " line and column number
+
+set statusline+=%3*                         " color
+set statusline+=\|                          " ornament 
+set statusline+=\ %3p%%\                    " percentage of file
+set statusline+=\|                          " ornament 
+set statusline+=\ %LL\                      " total number of lines
+"}}}
