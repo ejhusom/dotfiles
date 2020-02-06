@@ -28,7 +28,7 @@ set formatoptions+=t      " automatic line wrapping
 set textwidth=79            " max line width
 au BufRead,BufNewFile *.html setlocal textwidth=0 " unlimited line length in html-files
 " au BufRead,BufNewFile *.csv setlocal textwidth=0 " unlimited line length in html-files
-set colorcolumn=80
+" set colorcolumn=80
 highlight ColorColumn ctermbg=darkgray
 set mouse=a                 " enable mouse in all modes
 set ruler                   " always show cursor
@@ -55,7 +55,7 @@ endif
 " clipboard, without having to use the + and * registers. Also, normal
 " control/command and c/v is very slow for large chunks of text, so this works
 " better.
-nmap <C-y> :w !pbcopy<CR><CR>
+vmap <C-y> :w !pbcopy<CR><CR>
 nmap <C-p> :r !pbpaste<CR><CR>
 "}}}
 
@@ -116,6 +116,7 @@ set path+=**                " search in subfolders when using :find
 " colorscheme pencil
 " colorscheme gruvbox
 colorscheme molokai
+au BufEnter *.md colorscheme pencil " unlimited line length in html-files
 " colorscheme harlequin
 " colorscheme dogrun
 " colorscheme darkspace
@@ -125,6 +126,7 @@ colorscheme molokai
 " let g:pencil_higher_contrast_ui = 0
 " let g:pencil_neutral_code_bg = 1
 set background=dark
+au BufEnter *.md setlocal background=light
 "set foldcolumn=1           " add margin to the left
 "}}}
 
