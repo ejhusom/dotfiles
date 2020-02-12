@@ -117,7 +117,6 @@ set path+=**                " search in subfolders when using :find
 " colorscheme pencil
 " colorscheme gruvbox
 colorscheme molokai
-au BufEnter *.md colorscheme pencil " unlimited line length in html-files
 " colorscheme harlequin
 " colorscheme dogrun
 " colorscheme darkspace
@@ -127,7 +126,6 @@ au BufEnter *.md colorscheme pencil " unlimited line length in html-files
 " let g:pencil_higher_contrast_ui = 0
 " let g:pencil_neutral_code_bg = 1
 set background=dark
-au BufEnter *.md setlocal background=light
 "set foldcolumn=1           " add margin to the left
 "}}}
 
@@ -210,10 +208,6 @@ source ~/.vim/vimscripts/handle_url.vim
 source ~/.vim/vimscripts/switchsourceheader.vim
 " Markdown preview
 " source ~/.vim/after/ftplugin/markdown/instant-markdown.vim
-"}}}
-
-" Git time metric{{{
-let g:gtm_plugin_status_enabled = 1
 "}}}
 
 " Statusline{{{
