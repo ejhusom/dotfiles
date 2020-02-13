@@ -208,6 +208,8 @@ source ~/.vim/vimscripts/handle_url.vim
 source ~/.vim/vimscripts/switchsourceheader.vim
 " Markdown preview
 " source ~/.vim/after/ftplugin/markdown/instant-markdown.vim
+" GSM translate
+source ~/.vim/vimscripts/gsm-translate.vim
 "}}}
 
 " Statusline{{{
