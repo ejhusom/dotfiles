@@ -52,7 +52,8 @@ RPS1+=\$vcs_info_msg_0_
 
 # aliases{{{
 alias xdg-open="open"
-alias openchrome="open -a 'Google Chrome'"
+alias chrome="open -a 'Google Chrome'"
+alias vscode="open -a 'Visual Studio Code'"
 #}}}
 
 # vim bindings{{{
@@ -62,4 +63,12 @@ alias openchrome="open -a 'Google Chrome'"
 # ls colors{{{
 export CLICOLOR=1
 export TERM=xterm-color 
+#}}}
+
+# escape brackets{{{
+alias rake='noglob rake'
+#}}}
+
+# pyenv{{{
+eval "$(pyenv init -)"
 #}}}
