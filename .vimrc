@@ -30,6 +30,7 @@ set textwidth=79            " max line width
 au BufRead,BufNewFile *.html setlocal textwidth=0 " unlimited line length in html-files
 " au BufRead,BufNewFile *.csv setlocal textwidth=0 " unlimited line length in html-files
 " set colorcolumn=80
+set termguicolors
 highlight ColorColumn ctermbg=darkgray
 set mouse=a                 " enable mouse in all modes
 set ruler                   " always show cursor
@@ -58,6 +59,11 @@ endif
 " better.
 vmap <C-y> :w !pbcopy<CR><CR>
 nmap <C-p> :r !pbpaste<CR><CR>
+"}}}
+
+" Completion{{{
+" set complete=
+set omnifunc=syntaxcomplete#Complete
 "}}}
 
 " Folding{{{
@@ -262,10 +268,17 @@ set statusline+=\|                          " ornament
 set statusline+=\ %LL\                      " total number of lines
 "}}}
 
+" Undo{{{
+set undodir=~/.vim/undodir
+set undofile
+"}}}
+
 " Plugins{{{
 call plug#begin('~/.vim/plugged')
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'https://github.com/majutsushi/tagbar', { 'do': { -> mkdp#util#install() } }
+" Plug 'https://github.com/ajh17/VimCompletesMe', { 'do': { -> mkdp#util#install() } }
 
 call plug#end()
 "}}}
@@ -354,3 +367,9 @@ let g:mkdp_page_title = '「${name}」'
 
 nmap <C-s> <Plug>MarkdownPreview
 "}}}
+
+" TagBar{{{
+nmap <F8> :TagbarToggle<CR>
+"}}}
+
+

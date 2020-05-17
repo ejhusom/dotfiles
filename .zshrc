@@ -72,3 +72,7 @@ alias rake='noglob rake'
 # pyenv{{{
 eval "$(pyenv init -)"
 #}}}
+
+# ctags{{{
+alias ctags="`brew --prefix`/bin/ctags"
+#}}}
