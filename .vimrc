@@ -117,6 +117,7 @@ set hlsearch                " highlight search terms
 set smartcase               " ignores case if search term has small case, but does not ignore case if term has large case
 set ignorecase
 set path+=**                " search in subfolders when using :find
+nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen<cr>
 "}}}
 
 " Appearance{{{

@@ -33,3 +33,7 @@ hi markdownId guifg=#2fb3a6
 hi markdownIdDeclaration guifg=#317849 gui=bold
 hi markdownListMarker guifg=#317849
 highlight Cursor guibg=#15abdd
+
+
+inoremap ,ct ```<CR>
+inoremap $ $$<Esc>i
