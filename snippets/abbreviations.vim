@@ -9,11 +9,19 @@
 " General{{{
 " Datestamp
 :iab <expr> dts strftime("%Y-%m-%d %A %T")
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
-inoremap { {}<Esc>i
-inoremap " ""<Esc>i
-inoremap ' ''<Esc>i
+" Closing stuff
+" inoremap ( ()<Esc>i
+" inoremap [ []<Esc>i
+" inoremap { {}<Esc>i
+" inoremap " ""<Esc>i
+" inoremap ' ''<Esc>i
+inoremap () ()<Left>
+inoremap [] []<Left>
+inoremap {} {}<Left>
+inoremap <> <><Left>
+inoremap "" ""<Left>
+inoremap '' ''<Left>
+inoremap $$ $$<Left>
 "}}}
 
 " Latex{{{
@@ -47,5 +55,4 @@ inoremap beginalign \begin{align}
 
 inoreabbrev \h \hat{}<Esc>i<C-R>=Eatchar('\s')<CR>
 inoreabbrev bs \boldsymbol{}<Esc>i<C-R>=Eatchar('\s')<CR>
-inoremap $ $$<Esc>i
 ""}}}
