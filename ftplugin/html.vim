@@ -1,12 +1,15 @@
 " ===================================================================
-" File:     Vim skeleton
+" File:     html.vim
 " Author:   Erik Johannes Husom
 " Created:  2019-06-24
 " -------------------------------------------------------------------
-" Description: Skeleton for Vim files.
+" Description: HTML specific configuration.
 " ===================================================================
 
 " Autoclose tag and put cursor inside tag.
-imap </ </<C-X><C-O><Esc>F<i
+inoremap </ </<C-X><C-O><Esc>F<i
 " Write tagname and then <C-e> to get enclosing brackets.
-imap <C-e> <Esc>yiwi<<Esc>ea></
+inoremap <C-e> <Esc>yiwi<<Esc>ea></<Esc>pa><Esc>F<i
+" Special tags
+inoremap <a <a href=""></a><Esc>F"i
+inoremap <img <img src=""><Esc>F"i
