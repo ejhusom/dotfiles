@@ -76,3 +76,9 @@ eval "$(pyenv init -)"
 # ctags{{{
 alias ctags="`brew --prefix`/bin/ctags"
 #}}}
+
+# adb fastboot{{{
+if [ -d "$HOME/Downloads/platform-tools" ] ; then
+ export PATH="$HOME/Downloads/platform-tools:$PATH"
+fi
+#}}}
