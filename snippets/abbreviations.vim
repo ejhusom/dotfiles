@@ -15,13 +15,13 @@
 " inoremap { {}<Esc>i
 " inoremap " ""<Esc>i
 " inoremap ' ''<Esc>i
-inoremap () ()<Left>
-inoremap [] []<Left>
-inoremap {} {}<Left>
-inoremap <> <><Left>
-inoremap "" ""<Left>
-inoremap '' ''<Left>
-inoremap $$ $$<Left>
+" inoremap () ()<Left>
+" inoremap [] []<Left>
+" inoremap {} {}<Left>
+" inoremap <> <><Left>
+" inoremap "" ""<Left>
+" inoremap '' ''<Left>
+" inoremap $$ $$<Left>
 "}}}
 
 " Latex{{{
