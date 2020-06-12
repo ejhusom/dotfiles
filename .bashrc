@@ -89,20 +89,20 @@ alias simpleprompt="PS1='\W> '"     # simple prompt
 #    ;;
 #esac
 
-## enable color support of ls and also add handy aliases
-#if [ -x /usr/bin/dircolors ]; then
-#    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-#    alias ls='ls --color=auto'
-#   #alias dir='dir --color=auto'
-#   #alias vdir='vdir --color=auto'
+# ## enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+   #alias dir='dir --color=auto'
+   #alias vdir='vdir --color=auto'
 
-#    alias grep='grep --color=auto'
-#    alias fgrep='fgrep --color=auto'
-#    alias egrep='egrep --color=auto'
-#fi
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
 
-## colored GCC warnings and errors
-##export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+# ## colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 ## some more ls aliases
 #alias ll='ls -alFk'  # show file size in kB
@@ -138,16 +138,16 @@ alias simpleprompt="PS1='\W> '"     # simple prompt
 # Anaconda stuff{{{
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ejhusom/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/ejhusom/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/ejhusom/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/ejhusom/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+# __conda_setup="$('/home/ejhusom/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/ejhusom/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/ejhusom/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/ejhusom/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
 # <<< conda initialize <<<
 #}}}
