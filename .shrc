@@ -38,12 +38,8 @@ alias l='ls -CF'
 #}}}
 
 # vim aliases{{{
-alias v='vim .'
-#}}}
-
-# ranger aliases{{{
-alias r='ranger-cd'
-#}}}
+alias v='vim'
+#}}
 
 # git aliases{{{
 alias g='git status'
@@ -60,18 +56,6 @@ alias gall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && \
 
 #}}}
 
-# Ranger cd to last used directory on quit{{{
-function ranger-cd {
-    tempfile="$(mktemp -t tmp.XXXXXX)"
-    /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
-    test -f "$tempfile" &&
-    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
-        cd -- "$(cat "$tempfile")"
-    fi
-    rm -f -- "$tempfile"
-}
-#}}}
-
 # homebrew stuff{{{
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
@@ -81,7 +65,6 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export NNN_USE_EDITOR=1
 export EDITOR="vim"
 export VISUAL="vim"
-# export NNN_TMPFILE
 
 n ()
 {
@@ -110,7 +93,6 @@ n ()
             rm -f "$NNN_TMPFILE" > /dev/null
     fi
 }
-# alias n='nnn -e'
 # }}}
 
 # export PATH=~/opt/miniconda3/bin:$PATH
