@@ -17,6 +17,10 @@ if [ -d "$HOME/Applications" ] ; then
 fi
 #}}}
 
+# Add private config
+if [ -r ~/dotfiles-private ]; then
+   source ~/dotfiles-private/.shrc
+fi
 # Aliases{{{
 
 # general shortcuts{{{
