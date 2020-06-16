@@ -138,14 +138,14 @@ alias simpleprompt="PS1='\W> '"     # simple prompt
 # Anaconda stuff{{{
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ejhusom/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/pingu/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/ejhusom/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/ejhusom/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/pingu/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/pingu/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/ejhusom/anaconda3/bin:$PATH"
+        export PATH="/home/pingu/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
