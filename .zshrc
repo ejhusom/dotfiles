@@ -11,7 +11,7 @@ fi
 
 # Prompt{{{
 # PS1='%B%F{#af5b4e}%n%f@%F{#4eaf82}%m %F{#4e79af}%~%f %# %b'
-PS1='%B%F{red}%n%f@%F{green}%m %F{blue}%~%f %# %b'
+PS1='%B%F{green}%n%f@%F{green}%m %F{green}%~%f %# %b'
 alias simpleprompt="PS1='%~'"
 
 # Enable themes
@@ -70,7 +70,7 @@ alias rake='noglob rake'
 #}}}
 
 # pyenv{{{
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 #}}}
 
 # ctags{{{

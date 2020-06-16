@@ -17,6 +17,10 @@ if [ -d "$HOME/Applications" ] ; then
 fi
 #}}}
 
+# Add private config
+if [ -r ~/dotfiles-private ]; then
+   source ~/dotfiles-private/.shrc
+fi
 # Aliases{{{
 
 # general shortcuts{{{
@@ -38,12 +42,8 @@ alias l='ls -CF'
 #}}}
 
 # vim aliases{{{
-alias v='vim .'
-#}}}
-
-# ranger aliases{{{
-alias r='ranger-cd'
-#}}}
+alias v='vim'
+#}}
 
 # git aliases{{{
 alias g='git status'
@@ -60,22 +60,44 @@ alias gall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && \
 
 #}}}
 
-# Ranger cd to last used directory on quit{{{
-function ranger-cd {
-    tempfile="$(mktemp -t tmp.XXXXXX)"
-    /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
-    test -f "$tempfile" &&
-    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
-        cd -- "$(cat "$tempfile")"
-    fi
-    rm -f -- "$tempfile"
-}
-#}}}
-
 # homebrew stuff{{{
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 #}}}
+
+# nnn file browser{{{
+export NNN_USE_EDITOR=1
+export EDITOR="vim"
+export VISUAL="vim"
+
+n ()
+{
+    # Block nesting of nnn in subshells
+    if [ -n $NNNLVL ] && [ "${NNNLVL:-0}" -ge 1 ]; then
+        echo "nnn is already running"
+        return
+    fi
+
+    # The default behaviour is to cd on quit (nnn checks if NNN_TMPFILE is set)
+    # To cd on quit only on ^G, remove the "export" as in:
+    #     NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+    # NOTE: NNN_TMPFILE is fixed, should not be modified
+    export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+
+    # Unmask ^Q (, ^V etc.) (if required, see `stty -a`) to Quit nnn
+    # stty start undef
+    # stty stop undef
+    # stty lwrap undef
+    # stty lnext undef
+
+    nnn "$@"
+
+    if [ -f "$NNN_TMPFILE" ]; then
+            . "$NNN_TMPFILE"
+            rm -f "$NNN_TMPFILE" > /dev/null
+    fi
+}
+# }}}
 
 # export PATH=~/opt/miniconda3/bin:$PATH
 # export PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin:$PATH
