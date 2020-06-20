@@ -56,6 +56,8 @@ alias gpl='git pull'
 alias gl='git log --graph --oneline' # show git log as graph
 alias gall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && \
     cd {} && git status -s && echo)' \;" # check git status of all subfolders
+alias gplall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && \
+    cd {} && git pull && echo)' \;" # dot git pull on all subfolders
 #}}}
 
 #}}}
