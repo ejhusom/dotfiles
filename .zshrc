@@ -9,6 +9,14 @@ if [ -r ~/dotfiles/.shrc ]; then
 fi
 #}}}
 
+# Tab completion for listing files and shell commands{{{
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)
+# }}}
+
 # Prompt{{{
 # PS1='%B%F{#af5b4e}%n%f@%F{#4eaf82}%m %F{#4e79af}%~%f %# %b'
 PS1='%B%F{green}%n%f@%F{green}%m %F{green}%~%f %# %b'
@@ -57,7 +65,7 @@ alias vscode="open -a 'Visual Studio Code'"
 #}}}
 
 # vim bindings{{{
-#bindkey -v
+bindkey -v
 #}}}
 
 # ls colors{{{
