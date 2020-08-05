@@ -219,6 +219,7 @@ source ~/.vim/vimscripts/switchsourceheader.vim
 " source ~/.vim/after/ftplugin/markdown/instant-markdown.vim
 " GSM translate
 source ~/.vim/vimscripts/gsm-translate.vim
+source ~/.vim/vimscripts/mdstyle.vim
 "}}}
 
 " Statusline{{{
@@ -374,5 +375,4 @@ nmap <C-s> <Plug>MarkdownPreview
 " TagBar{{{
 nmap <F8> :TagbarToggle<CR>
 "}}}
-
 
