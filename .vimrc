@@ -91,9 +91,9 @@ set expandtab               " inserts spaces instead of tab character
 set autoindent              " autoindent when creating new line
 
 " CSS
-autocmd FileType css setlocal tabstop=2      
-autocmd FileType css setlocal softtabstop=2  
-autocmd FileType css setlocal shiftwidth=2   
+" autocmd FileType css setlocal tabstop=2      
+" autocmd FileType css setlocal softtabstop=2  
+" autocmd FileType css setlocal shiftwidth=2   
 
 " HTML
 " autocmd FileType html setlocal tabstop=2      
