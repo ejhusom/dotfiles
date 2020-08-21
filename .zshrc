@@ -61,7 +61,9 @@ RPS1+=\$vcs_info_msg_0_
 # aliases{{{
 alias xdg-open="open"
 alias chrome="open -a 'Google Chrome'"
+alias chromium="open -a 'Chromium'"
 alias vscode="open -a 'Visual Studio Code'"
+alias vscodium="open -a 'VSCodium'"
 #}}}
 
 # vim bindings{{{
