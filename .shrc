@@ -21,6 +21,10 @@ fi
 if [ -r ~/dotfiles-private ]; then
    source ~/dotfiles-private/.shrc
 fi
+if [ -d "$HOME/dotfiles-private/bin" ] ; then
+    PATH="$HOME/dotfiles-private/bin:$PATH"
+    export PATH
+fi
 # Aliases{{{
 
 # general shortcuts{{{
