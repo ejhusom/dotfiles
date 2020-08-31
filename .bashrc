@@ -9,7 +9,7 @@ if [ -r ~/dotfiles/.shrc ]; then
 fi
 #}}}
 
-export DISPLAY=localhost:0.0
+# export DISPLAY=localhost:0.0
 
 # Prompt{{{
 export PS1="\[\e[31m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\] \[\e[34m\]\w\[\e[m\] \\$ "
