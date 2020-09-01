@@ -10,6 +10,11 @@ if [ -d "$HOME/dotfiles/bin" ] ; then
     export PATH
 fi
 
+if [ -d "$HOME/dotfiles-private/bin" ] ; then
+    PATH="$HOME/dotfiles-private/bin:$PATH"
+    export PATH
+fi
+
 # set PATH so it includes ~/Applications if it exists
 if [ -d "$HOME/Applications" ] ; then
     PATH="$HOME/Applications:$PATH"
