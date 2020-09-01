@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Move original rc files
+mv ~/.bashrc ~/.bashrc_original
+mv ~/.zshrc ~/.zshrc_original
+mv ~/.vimrc ~/.vimrc_original
+
+# Create necessary symlinks:
+ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/.bashrc ~/.bashrc
+ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/dotfiles/ ~/.vim
+
