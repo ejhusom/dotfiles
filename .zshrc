@@ -92,3 +92,8 @@ if [ -d "$HOME/Downloads/platform-tools" ] ; then
  export PATH="$HOME/Downloads/platform-tools:$PATH"
 fi
 #}}}
+
+# Ruby and Jekyll
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"
+export PATH="/Users/erikjohannes/.gem/ruby/2.7.0/bin:$PATH"
