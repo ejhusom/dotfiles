@@ -124,8 +124,8 @@ nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) 
 
 " Appearance{{{
 " colorscheme pencil
-" colorscheme gruvbox
-colorscheme molokai
+colorscheme gruvbox
+" colorscheme molokai
 " colorscheme harlequin
 " colorscheme dogrun
 " colorscheme darkspace
