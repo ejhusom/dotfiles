@@ -97,3 +97,6 @@ fi
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"
 export PATH="/Users/erikjohannes/.gem/ruby/2.7.0/bin:$PATH"
+
+# lesspipe
+export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
