@@ -278,11 +278,17 @@ set undofile
 "}}}
 
 " Plugins{{{
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'https://github.com/majutsushi/tagbar', { 'do': { -> mkdp#util#install() } }
-" Plug 'https://github.com/ajh17/VimCompletesMe', { 'do': { -> mkdp#util#install() } }
 
 call plug#end()
 "}}}
@@ -368,6 +374,10 @@ let g:mkdp_port = ''
 " preview page title
 " ${name} will be replace with the file name
 let g:mkdp_page_title = '「${name}」'
+
+" <Plug>MarkdownPreview
+" <Plug>MarkdownPreviewStop
+" <Plug>MarkdownPreviewToggle
 
 nmap <C-s> <Plug>MarkdownPreview
 "}}}
