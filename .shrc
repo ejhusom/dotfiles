@@ -3,6 +3,15 @@
 # Description:  General shell configuration.
 # ============================================================================
 
+uname_out="$(uname -s)"
+
+case "${uname_out}" in
+    Linux*)
+        alias open='xdg-open' ;;
+    # Darwin*)
+    #     pass ;;
+esac
+
 # Add to PATH{{{
 # set PATH so it includes bin from dotfiles
 if [ -d "$HOME/dotfiles/bin" ] ; then
@@ -34,7 +43,6 @@ fi
 
 # general shortcuts{{{
 alias x='exit'
-alias xo='xdg-open'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
