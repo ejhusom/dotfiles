@@ -12,6 +12,8 @@ case "${uname_out}" in
     #     pass ;;
 esac
 
+HISTSIZE=1500
+
 # Add to PATH{{{
 # set PATH so it includes bin from dotfiles
 if [ -d "$HOME/dotfiles/bin" ] ; then

@@ -1,11 +1,25 @@
 #!/usr/bin/env python3
-# ============================================================================
-# File:     Skeleton for Python files
-# Author:   Erik Johannes Husom
-# Created:  2019-06-19
-# ----------------------------------------------------------------------------
-# Description:
-#
-# ============================================================================
+# -*- coding: utf-8 -*-
+"""One-liner describing module.
+
+Longer description.
+
+Example:
+
+    >>>
+
+Attributes:
+
+
+TODO:
+
+
+Author:   
+    Erik Johannes Husom
+
+Created:  
+    2020-09-18
+
+"""
 
 

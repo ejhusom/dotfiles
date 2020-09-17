@@ -67,7 +67,7 @@ alias vscodium="open -a 'VSCodium'"
 #}}}
 
 # vim bindings{{{
-# bindkey -v
+bindkey -e
 #}}}
 
 # ls colors{{{
