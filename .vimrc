@@ -111,6 +111,11 @@ autocmd FileType make setlocal noexpandtab  " use tab (not spaces) in makefiles
 
 "}}}
 
+" File types{{{
+" DVC
+autocmd! BufNewFile,BufRead Dvcfile,*.dvc,dvc.lock setfiletype yaml
+"}}}
+
 " Searching{{{
 " Shortcut for removing search highlighting
 nnoremap <leader><space> :nohlsearch<CR>
