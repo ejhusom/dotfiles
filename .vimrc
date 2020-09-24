@@ -289,6 +289,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'https://github.com/majutsushi/tagbar', { 'do': { -> mkdp#util#install() } }
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 call plug#end()
 "}}}
@@ -382,3 +383,6 @@ nmap <C-s> <Plug>MarkdownPreview
 nmap <F8> :TagbarToggle<CR>
 "}}}
 
+" Latex preview{{{
+let g:livepreview_previewer = "open -a Preview"
+"}}}
