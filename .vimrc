@@ -111,6 +111,11 @@ autocmd FileType make setlocal noexpandtab  " use tab (not spaces) in makefiles
 
 "}}}
 
+" File types{{{
+" DVC
+autocmd! BufNewFile,BufRead Dvcfile,*.dvc,dvc.lock setfiletype yaml
+"}}}
+
 " Searching{{{
 " Shortcut for removing search highlighting
 nnoremap <leader><space> :nohlsearch<CR>
@@ -144,6 +149,7 @@ augroup snippets
     autocmd BufNewFile *.h 0r ~/.vim/snippets/skeleton.h
     autocmd BufNewFile *.cpp 0r ~/.vim/snippets/skeleton.cpp
     autocmd BufNewFile *.py 0r ~/.vim/snippets/skeleton.py
+    autocmd BufNewFile plottest.py 0r ~/.vim/snippets/plottest.py
     autocmd BufNewFile *.vim 0r ~/.vim/snippets/skeleton.vim
     autocmd BufNewFile *.html 0r ~/.vim/snippets/skeleton.html
     autocmd BufNewFile *.css 0r ~/.vim/snippets/skeleton.css

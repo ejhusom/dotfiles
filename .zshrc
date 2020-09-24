@@ -67,7 +67,7 @@ alias vscodium="open -a 'VSCodium'"
 #}}}
 
 # vim bindings{{{
-# bindkey -v
+bindkey -e
 #}}}
 
 # ls colors{{{
@@ -84,7 +84,12 @@ alias rake='noglob rake'
 #}}}
 
 # ctags{{{
-alias ctags="`brew --prefix`/bin/ctags"
+uname_out="$(uname -s)"
+
+case "${uname_out}" in
+    Darwin*)
+        alias ctags="`brew --prefix`/bin/ctags" ;; 
+esac
 #}}}
 
 # adb fastboot{{{
