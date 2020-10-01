@@ -11,14 +11,6 @@ if [ -r ~/dotfiles/.shrc ]; then
 fi
 #}}}
 
-# Tab completion for listing files and shell commands{{{
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)
-# }}}
-
 # Prompt appearance{{{
 # PS1='%B%F{#af5b4e}%n%f@%F{#4eaf82}%m %F{#4e79af}%~%f %# %b'
 PS1='%B%F{green}%n%f@%F{green}%m %F{green}%~%f %# %b'
@@ -56,56 +48,8 @@ RPS1+=\$vcs_info_msg_0_
 #}}}
 #}}}
 
-# add gnu coreutils{{{
-# export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
-#}}}
-
-# aliases{{{
-
-# macOS specific aliases
-case "${uname_out}" in
-    Darwin*)
-        alias ctags="`brew --prefix`/bin/ctags"
-        alias xdg-open="open" 
-        alias chrome="open -a 'Google Chrome'"
-        alias chromium="open -a 'Chromium'"
-        alias vscode="open -a 'Visual Studio Code'"
-        alias vscodium="open -a 'VSCodium'" ;;
-esac
-#}}}
-
 # vim bindings{{{
 bindkey -v
-#}}}
-
-# ls colors{{{
-export CLICOLOR=1
-export TERM=xterm-color 
-#}}}
-
-# escape brackets{{{
-alias rake='noglob rake'
-#}}}
-
-# ctags{{{
-uname_out="$(uname -s)"
-
-case "${uname_out}" in
-    Darwin*)
-        alias ctags="`brew --prefix`/bin/ctags" ;; 
-esac
-#}}}
-
-# adb fastboot{{{
-if [ -d "$HOME/Downloads/platform-tools" ] ; then
- export PATH="$HOME/Downloads/platform-tools:$PATH"
-fi
-#}}}
-
-# Ruby and Jekyll{{{
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"
-export PATH="/Users/erikjohannes/.gem/ruby/2.7.0/bin:$PATH"
 #}}}
 
 # Manjaro .zshrc{{{
@@ -122,9 +66,8 @@ setopt histignorealldups                                        # If a new comma
 setopt autocd                                                   # if only directory path is entered, cd there.
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
-LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-export LS_COLORS
-export CLICOLOR=1
+# Enable colors in ls command
+alias ls="ls --color=auto"
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
 zstyle ':completion:*' rehash true                              # automatically find new executables in path 
 # Speed up completions
@@ -132,12 +75,9 @@ zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 HISTFILE=~/.zhistory
-HISTSIZE=1000
-SAVEHIST=500
 #export EDITOR=/usr/bin/nano
 #export VISUAL=/usr/bin/nano
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
-
 
 ## Keybindings section
 bindkey '^[[7~' beginning-of-line                               # Home key
