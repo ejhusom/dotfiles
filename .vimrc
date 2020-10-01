@@ -168,6 +168,7 @@ nnoremap ,makecpp :0r ~/.vim/snippets/makecpp<CR>
 nnoremap ,bash :0r ~/.vim/snippets/bashskeleton<CR><S-g>
 nnoremap ,function :r ~/.vim/snippets/function.py<CR>
 nnoremap ,class :r ~/.vim/snippets/class.py<CR>
+nnoremap ,import :r ~/.vim/snippets/import.py<CR>
 
 " Abbreviation commands
 inoremap ,ct ```<CR>
