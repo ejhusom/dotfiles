@@ -64,7 +64,6 @@ nmap <C-p> :r !pbpaste<CR><CR>
 " Completion{{{
 " set complete=
 set omnifunc=syntaxcomplete#Complete
-# Remove included files from searching, to make it faster
 set complete-=i
 "}}}
 
