@@ -41,7 +41,9 @@ set splitright
 let mapleader = ','
 execute pathogen#infect()
 " autocmd BufWinEnter * highlight ColorColumn ctermbg=grey
-" set colorcolumn=80          " highlight column 80
+" set colorcolumn=80  
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start        " highlight column 80
 " }}}
 
 " Copy/paste{{{
