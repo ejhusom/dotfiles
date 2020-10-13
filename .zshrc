@@ -49,7 +49,8 @@ RPS1+=\$vcs_info_msg_0_
 #}}}
 
 # vim bindings{{{
-bindkey -v
+# The part after '-v' make sure the backspace key works as expected
+bindkey -v '^?' backward-delete-char
 #}}}
 
 # Manjaro .zshrc{{{
