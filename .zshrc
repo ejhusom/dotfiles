@@ -120,7 +120,7 @@ alias gitu='git add . && git commit && git push'
 
 # Theming section  
 autoload -U compinit colors zcalc
-compinit -d
+compinit -i -d
 colors
 
 # enable substitution for prompt
