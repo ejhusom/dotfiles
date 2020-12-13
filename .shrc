@@ -78,7 +78,8 @@ case "${uname_out}" in
         alias chrome="open -a 'Google Chrome'"
         alias chromium="open -a 'Chromium'"
         alias vscode="open -a 'Visual Studio Code'"
-        alias vscodium="open -a 'VSCodium'" ;;
+        alias vscodium="open -a 'VSCodium'"
+        defaults write -g ApplePressAndHoldEnabled -bool false ;;
 esac
 
 
