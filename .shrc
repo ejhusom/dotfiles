@@ -5,6 +5,7 @@
 # Get name of OS, for use in later case testes
 uname_out="$(uname -s)"
 
+# Adjust history size
 HISTSIZE=1500
 SAVEHIST=1500
 
