@@ -23,7 +23,7 @@ set shell=bash\ -i
 set number                  " line numbers
 set wildmenu                " autocomplete menu
 set showmatch               " highlight matching parenthesis
-set history=200             " record longer command history (default=50)
+set history=100             " record longer command history (default=50)
 set linebreak               " do not break lines in middle of a word
 set formatoptions+=t      " automatic line wrapping
 set textwidth=79            " max line width
@@ -43,7 +43,7 @@ execute pathogen#infect()
 " autocmd BufWinEnter * highlight ColorColumn ctermbg=grey
 " set colorcolumn=80  
 " allow backspacing over everything in insert mode
-set backspace=indent,eol,start        " highlight column 80
+set backspace=indent,eol,start
 " }}}
 
 " Copy/paste{{{
@@ -390,6 +390,7 @@ nmap <C-s> <Plug>MarkdownPreview
 "}}}
 
 " Latex preview{{{
+" autocmd Filetype tex setl updatetime=1
 let g:livepreview_previewer = "open -a Preview"
 "}}}
 
