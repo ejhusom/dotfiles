@@ -176,7 +176,7 @@ nnoremap ,import :r ~/.vim/snippets/import.py<CR>
 " Abbreviation commands
 inoremap ,ct ```<CR>
 
-:source ~/dotfiles/snippets/abbreviations.vim 
+:source ~/dotfiles/vim/snippets/abbreviations.vim 
 
 " Function for removing trailing whitespace '\s' in abbreviations:
 func Eatchar(pat)
@@ -387,10 +387,6 @@ let g:mkdp_port = ''
 let g:mkdp_page_title = '「${name}」'
 
 nmap <C-s> <Plug>MarkdownPreview
-"}}}
-
-" TagBar{{{
-nmap <F8> :TagbarToggle<CR>
 "}}}
 
 " Latex preview{{{

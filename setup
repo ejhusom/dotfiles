@@ -6,8 +6,8 @@ mv ~/.zshrc ~/.zshrc_original
 mv ~/.vimrc ~/.vimrc_original
 
 # Create necessary symlinks:
-ln -s ~/dotfiles/.vimrc ~/.vimrc
+ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.bashrc ~/.bashrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/ ~/.vim
+ln -s ~/dotfiles/vim/ ~/.vim
 
