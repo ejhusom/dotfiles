@@ -72,7 +72,7 @@ alias gplall="find . -maxdepth 1 -mindepth 1 -type d -exec sh -c '(echo {} && \
 
 case "${uname_out}" in
     Linux*)
-        alias open='xdg-open' ;;
+        alias xopen='xdg-open' ;;
     Darwin*)
         alias ctags="`brew --prefix`/bin/ctags"
         alias xdg-open="open" 
