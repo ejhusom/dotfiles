@@ -28,7 +28,7 @@ set linebreak               " do not break lines in middle of a word
 set formatoptions+=t      " automatic line wrapping
 set textwidth=79            " max line width
 au BufRead,BufNewFile *.html setlocal textwidth=0 " unlimited line length in html-files
-" au BufRead,BufNewFile *.csv setlocal textwidth=0 " unlimited line length in html-files
+au BufRead,BufNewFile *.csv setlocal textwidth=0 " unlimited line length in html-files
 " set colorcolumn=80
 set termguicolors
 highlight ColorColumn ctermbg=darkgray
