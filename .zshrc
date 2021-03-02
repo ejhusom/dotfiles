@@ -267,3 +267,4 @@ case "${uname_out}" in
         ;;
 esac
 #}}}
+export PATH="/usr/local/opt/lua@5.3/bin:$PATH"
