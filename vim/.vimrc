@@ -76,11 +76,13 @@ autocmd Filetype cpp set foldmethod=syntax          " syntax folding in C++ file
 autocmd Filetype c set foldmethod=syntax            " syntax folding in C files
 autocmd Filetype javascript set foldmethod=indent   " syntax folding in C files
 autocmd Filetype javascript set foldnestmax=2       " syntax folding in C files
-autocmd Filetype tex set foldmarker=\\begin,\\end
-autocmd Filetype tex set foldmethod=marker
+" autocmd Filetype tex set foldmarker=\\begin,\\end
+" autocmd Filetype tex set foldmarker=\\section,%\\endsection
 let javaScript_fold = 1    
 let g:markdown_folding = 1
 let g:markdown_enable_folding = 1
+let g:tex_fold_enabled = 1
+autocmd Filetype tex set foldmethod=syntax
 nnoremap <space> za                                 " toggle folding
 "}}}
 
